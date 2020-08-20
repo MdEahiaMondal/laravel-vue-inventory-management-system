@@ -1,22 +1,45 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+namespace App\Http\Controllers\Api\Auth;
 
 use App\Http\Controllers\Controller;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth:api', ['except' => ['login']]);
+        $this->middleware('auth:api', ['except' => ['login', 'signup']]);
     }
 
 
+    public function signup(Request  $request)
+    {
+        $this->validate($request, [
+            'name' => 'required|string',
+            'email' => 'required|unique:users,email',
+            'password' => 'required|min:8|confirmed',
+        ]);
+
+       $user =  User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password)
+        ]);
+
+       if ($user){
+           info('dd');
+           return $this->login($request);
+       }else{
+           return response()->json(['error' => 'Something is wrong, Please try again letter'], 500);
+       }
+    }
+
     public function login(Request $request)
     {
-
         $this->validate($request, [
             'email' => 'required|email',
             'password' => 'required|min:8'
@@ -27,7 +50,6 @@ class AuthController extends Controller
         if ($token = $this->guard()->attempt($credentials)) {
             return $this->respondWithToken($token);
         }
-
         return response()->json(['error' => 'Email or Password is invalid'], 401);
     }
 
