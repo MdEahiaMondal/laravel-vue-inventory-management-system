@@ -12,7 +12,7 @@ class AuthController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth:api', ['except' => ['login', 'signup']]);
+        $this->middleware('jwtVerify', ['except' => ['login', 'signup']]);
     }
 
 
@@ -31,7 +31,6 @@ class AuthController extends Controller
         ]);
 
        if ($user){
-           info('dd');
            return $this->login($request);
        }else{
            return response()->json(['error' => 'Something is wrong, Please try again letter'], 500);
