@@ -56501,7 +56501,8 @@ var routes = [{
   component: _views_auth_ForgotPassword__WEBPACK_IMPORTED_MODULE_5__["default"]
 }];
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
-  routes: routes
+  routes: routes,
+  mode: 'history'
 });
 /* harmony default export */ __webpack_exports__["default"] = (router);
 
