@@ -19,7 +19,19 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8153077e-0fa6-4c3a-a28a-abed68885346" name="Default Changelist" comment="backend template setup done" />
+    <list default="true" id="8153077e-0fa6-4c3a-a28a-abed68885346" name="Default Changelist" comment="link vue to laravel welcome pages">
+      <change afterPath="$PROJECT_DIR$/resources/js/App.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/Footer.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/ScrollToTop.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/Sidebar.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/TopBar.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/views/Dashboard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/ExampleComponent.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,6 +40,14 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package.json" />
+        <option value="Vue Single File Component" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -175,7 +195,7 @@
       <option name="presentableId" value="Default" />
       <updated>1597924184155</updated>
       <workItem from="1597924185458" duration="187000" />
-      <workItem from="1597924436086" duration="1221000" />
+      <workItem from="1597924436086" duration="4678000" />
     </task>
     <task id="LOCAL-00001" summary="install laravel ui for vue">
       <created>1597924988497</created>
@@ -191,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597925683550</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="link vue to laravel welcome pages">
+      <created>1597925850807</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1597925850807</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,16 +241,21 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="install laravel ui for vue" />
     <MESSAGE value="backend template setup done" />
-    <option name="LAST_COMMIT_MESSAGE" value="backend template setup done" />
+    <MESSAGE value="link vue to laravel welcome pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="link vue to laravel welcome pages" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="292" y="119" key="FileChooserDialogImpl" timestamp="1597928492530">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state x="292" y="119" key="FileChooserDialogImpl/0.0.1024.728@0.0.1024.728" timestamp="1597928492530" />
     <state x="13" y="9" key="SettingsEditor" timestamp="1597924310673">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
     <state x="13" y="9" key="SettingsEditor/0.0.1024.728@0.0.1024.728" timestamp="1597924310673" />
-    <state x="104" y="93" key="Vcs.Push.Dialog.v2" timestamp="1597924990572">
+    <state x="104" y="93" key="Vcs.Push.Dialog.v2" timestamp="1597925851905">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
-    <state x="104" y="93" key="Vcs.Push.Dialog.v2/0.0.1024.728@0.0.1024.728" timestamp="1597924990572" />
+    <state x="104" y="93" key="Vcs.Push.Dialog.v2/0.0.1024.728@0.0.1024.728" timestamp="1597925851905" />
   </component>
 </project>
