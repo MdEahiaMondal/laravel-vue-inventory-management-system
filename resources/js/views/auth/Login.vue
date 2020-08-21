@@ -48,8 +48,8 @@ name: "Login",
     {
         return {
             form: {
-                email: '',
-                password: ''
+                email: 'author@gmail.com',
+                password: '12345678'
             }
         }
     },
@@ -59,6 +59,7 @@ name: "Login",
            axios.post('http://localhost:8000/api/auth/login', this.form)
             .then(res => {
                 console.log(res)
+                User.responseAfterLogin(res)
             })
             .catch(e => {
                 console.log(e.response)

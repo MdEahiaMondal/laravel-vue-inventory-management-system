@@ -11,6 +11,10 @@ import axios from 'axios'
 window.axios = axios
 
 
+import User from "./helpers/User";
+window.User = User
+
+
 new Vue({
     el: '#app',
     router,
