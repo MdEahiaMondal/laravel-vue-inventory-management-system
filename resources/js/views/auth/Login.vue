@@ -43,7 +43,12 @@
 
 <script>
 export default {
-name: "Login",
+    created() {
+        if (User.loggedIn()){
+            this.$router.push({name: 'dashboard'})
+        }
+    },
+    name: "Login",
     data()
     {
         return {

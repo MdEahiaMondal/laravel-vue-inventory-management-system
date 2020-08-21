@@ -2632,6 +2632,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
+  created: function created() {
+    if (!User.loggedIn()) {
+      this.$router.push({
+        path: '/'
+      });
+    }
+  },
   name: "Dashboard"
 });
 
@@ -2743,6 +2750,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
+  created: function created() {
+    if (User.loggedIn()) {
+      this.$router.push({
+        name: 'dashboard'
+      });
+    }
+  },
   name: "Login",
   data: function data() {
     return {
@@ -56722,6 +56736,9 @@ __webpack_require__.r(__webpack_exports__);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]);
 var routes = [{
   path: '/',
+  component: _views_auth_Login__WEBPACK_IMPORTED_MODULE_3__["default"]
+}, {
+  path: '/login',
   component: _views_auth_Login__WEBPACK_IMPORTED_MODULE_3__["default"]
 }, {
   path: '/register',
