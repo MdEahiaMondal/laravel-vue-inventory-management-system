@@ -2685,10 +2685,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "Index",
-  created: function created() {
-    console.log('ooooooooo');
-  }
+  name: "Index"
 });
 
 /***/ }),
@@ -60995,18 +60992,46 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
 var routes = [{
   path: '/',
   name: 'login',
-  component: _views_auth_Login__WEBPACK_IMPORTED_MODULE_3__["default"]
+  component: _views_auth_Login__WEBPACK_IMPORTED_MODULE_3__["default"],
+  beforeEnter: function beforeEnter(to, from, next) {
+    if (User.loggedIn()) {
+      next('/dashboard');
+    } else {
+      next();
+    }
+  }
 }, {
   path: '/login',
-  component: _views_auth_Login__WEBPACK_IMPORTED_MODULE_3__["default"]
+  component: _views_auth_Login__WEBPACK_IMPORTED_MODULE_3__["default"],
+  beforeEnter: function beforeEnter(to, from, next) {
+    if (User.loggedIn()) {
+      next('/dashboard');
+    } else {
+      next();
+    }
+  }
 }, {
   path: '/register',
   name: 'register',
-  component: _views_auth_Register__WEBPACK_IMPORTED_MODULE_4__["default"]
+  component: _views_auth_Register__WEBPACK_IMPORTED_MODULE_4__["default"],
+  beforeEnter: function beforeEnter(to, from, next) {
+    if (User.loggedIn()) {
+      next('/dashboard');
+    } else {
+      next();
+    }
+  }
 }, {
   path: '/forgot-password',
   name: 'forgotPassword',
-  component: _views_auth_ForgotPassword__WEBPACK_IMPORTED_MODULE_5__["default"]
+  component: _views_auth_ForgotPassword__WEBPACK_IMPORTED_MODULE_5__["default"],
+  beforeEnter: function beforeEnter(to, from, next) {
+    if (User.loggedIn()) {
+      next('/dashboard');
+    } else {
+      next();
+    }
+  }
 }, {
   path: '/dashboard',
   name: 'dashboard',

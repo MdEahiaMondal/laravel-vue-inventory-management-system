@@ -17,21 +17,49 @@ const routes = [
         path: '/',
         name: 'login',
         component: Login,
+        beforeEnter(to, from, next) {
+            if (User.loggedIn()){
+                next('/dashboard')
+            }else{
+                next()
+            }
+        }
     },
     {
         path: '/login',
         component: Login,
+        beforeEnter(to, from, next) {
+            if (User.loggedIn()){
+                next('/dashboard')
+            }else{
+                next()
+            }
+        }
     },
     {
         path: '/register',
         name: 'register',
         component: Register,
+        beforeEnter(to, from, next) {
+            if (User.loggedIn()){
+                next('/dashboard')
+            }else{
+                next()
+            }
+        }
     },
 
     {
         path: '/forgot-password',
         name: 'forgotPassword',
         component: ForgotPassword,
+        beforeEnter(to, from, next) {
+            if (User.loggedIn()){
+                next('/dashboard')
+            }else{
+                next()
+            }
+        }
     },
 
     {
