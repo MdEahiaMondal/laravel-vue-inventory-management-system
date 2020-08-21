@@ -13,7 +13,7 @@ const Toast = Swal.mixin({
 })
 
 class sweetalert2{
-    Toast(message, type){
+    Toast(message, type = 'success'){
         Toast.fire({
             icon: type,
             title: message
