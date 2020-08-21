@@ -2,12 +2,12 @@
     <div class="Main">
         <div id="wrapper">
             <!-- Sidebar -->
-            <sidebar></sidebar>
+            <sidebar v-if="!['login', 'register', 'forgotPassword'].includes($route.name)"></sidebar>
             <!-- Sidebar -->
             <div id="content-wrapper" class="d-flex flex-column">
                 <div id="content">
                     <!-- TopBar -->
-                    <top-bar></top-bar>
+                    <top-bar v-if="!['login', 'register', 'forgotPassword'].includes($route.name)"></top-bar>
                     <!-- Topbar -->
                     <!-- Container Fluid-->
                     <div class="container-fluid" id="container-wrapper">
@@ -16,7 +16,7 @@
                     <!---Container Fluid-->
                 </div>
                 <!-- Footer -->
-                    <footer></footer>
+                    <footer v-if="!['login', 'register', 'forgotPassword'].includes($route.name)"></footer>
                 <!-- Footer -->
             </div>
         </div>
@@ -30,7 +30,11 @@ import Footer from "./components/Footer";
 import TopBar from "./components/TopBar";
 export default {
     name: "App",
-    components: {TopBar, Footer, Sidebar}
+    components: {
+        TopBar,
+        Footer,
+        Sidebar
+    },
 }
 </script>
 

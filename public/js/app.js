@@ -41697,7 +41697,9 @@ var render = function() {
       "div",
       { attrs: { id: "wrapper" } },
       [
-        _c("sidebar"),
+        !["login", "register", "forgotPassword"].includes(_vm.$route.name)
+          ? _c("sidebar")
+          : _vm._e(),
         _vm._v(" "),
         _c(
           "div",
@@ -41710,7 +41712,11 @@ var render = function() {
               "div",
               { attrs: { id: "content" } },
               [
-                _c("top-bar"),
+                !["login", "register", "forgotPassword"].includes(
+                  _vm.$route.name
+                )
+                  ? _c("top-bar")
+                  : _vm._e(),
                 _vm._v(" "),
                 _c(
                   "div",
@@ -41725,7 +41731,9 @@ var render = function() {
               1
             ),
             _vm._v(" "),
-            _c("footer")
+            !["login", "register", "forgotPassword"].includes(_vm.$route.name)
+              ? _c("footer")
+              : _vm._e()
           ]
         )
       ],
@@ -60201,15 +60209,18 @@ __webpack_require__.r(__webpack_exports__);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]);
 var routes = [{
   path: '/',
+  name: 'login',
   component: _views_auth_Login__WEBPACK_IMPORTED_MODULE_3__["default"]
 }, {
   path: '/login',
   component: _views_auth_Login__WEBPACK_IMPORTED_MODULE_3__["default"]
 }, {
   path: '/register',
+  name: 'register',
   component: _views_auth_Register__WEBPACK_IMPORTED_MODULE_4__["default"]
 }, {
   path: '/forgot-password',
+  name: 'forgotPassword',
   component: _views_auth_ForgotPassword__WEBPACK_IMPORTED_MODULE_5__["default"]
 }, {
   path: '/dashboard',

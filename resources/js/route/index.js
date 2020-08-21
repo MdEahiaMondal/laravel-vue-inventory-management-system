@@ -9,6 +9,7 @@ Vue.use(VueRouter)
 const routes = [
     {
         path: '/',
+        name: 'login',
         component: Login,
     },
     {
@@ -17,11 +18,13 @@ const routes = [
     },
     {
         path: '/register',
+        name: 'register',
         component: Register,
     },
 
     {
         path: '/forgot-password',
+        name: 'forgotPassword',
         component: ForgotPassword,
     },
 
