@@ -14,9 +14,11 @@
                                         <div class="form-group">
                                             <input type="email" class="form-control" v-model="form.email" id="exampleInputEmail" aria-describedby="emailHelp"
                                                    placeholder="Enter Email Address">
+                                            <small class="text-danger" v-if="errors.email">{{ errors.email[0] }}</small>
                                         </div>
                                         <div class="form-group">
                                             <input type="password" v-model="form.password" class="form-control" id="exampleInputPassword" placeholder="Password">
+                                            <small class="text-danger" v-if="errors.password">{{ errors.password[0]}}</small>
                                         </div>
                                         <div class="form-group">
                                             <button type="submit" class="btn btn-primary btn-block">Login</button>
@@ -55,7 +57,8 @@ export default {
             form: {
                 email: 'author@gmail.com',
                 password: '12345678'
-            }
+            },
+            errors: []
         }
     },
     methods: {
@@ -65,9 +68,17 @@ export default {
             .then(res => {
                 User.responseAfterLogin(res)
                 this.$router.push({name: 'dashboard'})
+                Message.Toaster('Signed in successfully', 'success')
             })
             .catch(e => {
-                console.log(e.response)
+                switch (e.response.status){
+                    case 401:
+                        Message.Toaster(e.response.data.error, 'error')
+                        break;
+                    case 422:
+                        this.errors = e.response.data.errors
+                        break
+                }
             })
         }
     }

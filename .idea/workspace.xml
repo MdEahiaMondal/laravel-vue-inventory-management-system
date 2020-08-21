@@ -19,8 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8153077e-0fa6-4c3a-a28a-abed68885346" name="Default Changelist" comment="after successfully loggedIn return redirect to dashboard">
-      <change beforePath="$PROJECT_DIR$/resources/js/views/Dashboard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Dashboard.vue" afterDir="false" />
+    <list default="true" id="8153077e-0fa6-4c3a-a28a-abed68885346" name="Default Changelist" comment="without loggedIn user can not access secure route">
+      <change afterPath="$PROJECT_DIR$/resources/js/helpers/Message.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/plaugin/sweetalert2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/views/auth/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/auth/Login.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -200,7 +206,7 @@
       <workItem from="1597978478384" duration="1734000" />
       <workItem from="1597983608749" duration="885000" />
       <workItem from="1597989769955" duration="1262000" />
-      <workItem from="1597991139088" duration="4412000" />
+      <workItem from="1597991139088" duration="6007000" />
     </task>
     <task id="LOCAL-00001" summary="install laravel ui for vue">
       <created>1597924988497</created>
@@ -293,7 +299,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598003987314</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="without loggedIn user can not access secure route">
+      <created>1598004825301</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1598004825301</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -328,7 +341,8 @@
     <MESSAGE value="make a helper function TokenVerified that help us check token is valid or not" />
     <MESSAGE value="make a helper function User that help us store the token and check" />
     <MESSAGE value="after successfully loggedIn return redirect to dashboard" />
-    <option name="LAST_COMMIT_MESSAGE" value="after successfully loggedIn return redirect to dashboard" />
+    <MESSAGE value="without loggedIn user can not access secure route" />
+    <option name="LAST_COMMIT_MESSAGE" value="without loggedIn user can not access secure route" />
   </component>
   <component name="WindowStateProjectService">
     <state x="292" y="119" key="FileChooserDialogImpl" timestamp="1597936442152">
@@ -339,9 +353,9 @@
       <screen x="0" y="0" width="1024" height="728" />
     </state>
     <state x="13" y="9" key="SettingsEditor/0.0.1024.728@0.0.1024.728" timestamp="1597924310673" />
-    <state x="104" y="93" key="Vcs.Push.Dialog.v2" timestamp="1598003988617">
+    <state x="104" y="93" key="Vcs.Push.Dialog.v2" timestamp="1598004826559">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
-    <state x="104" y="93" key="Vcs.Push.Dialog.v2/0.0.1024.728@0.0.1024.728" timestamp="1598003988617" />
+    <state x="104" y="93" key="Vcs.Push.Dialog.v2/0.0.1024.728@0.0.1024.728" timestamp="1598004826559" />
   </component>
 </project>

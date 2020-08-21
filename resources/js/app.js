@@ -15,6 +15,9 @@ import User from "./helpers/User";
 window.User = User
 
 
+import Message from "./helpers/Message";
+window.Message = Message
+
 new Vue({
     el: '#app',
     router,
