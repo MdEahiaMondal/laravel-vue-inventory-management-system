@@ -2754,9 +2754,14 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     login: function login() {
+      var _this = this;
+
       axios.post('http://localhost:8000/api/auth/login', this.form).then(function (res) {
-        console.log(res);
         User.responseAfterLogin(res);
+
+        _this.$router.push({
+          name: 'dashboard'
+        });
       })["catch"](function (e) {
         console.log(e.response);
       });
@@ -56724,6 +56729,10 @@ var routes = [{
 }, {
   path: '/forgot-password',
   component: _views_auth_ForgotPassword__WEBPACK_IMPORTED_MODULE_5__["default"]
+}, {
+  path: '/dashboard',
+  name: 'dashboard',
+  component: _views_Dashboard__WEBPACK_IMPORTED_MODULE_2__["default"]
 }];
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
   routes: routes,

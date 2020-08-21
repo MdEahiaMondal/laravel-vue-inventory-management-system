@@ -58,8 +58,8 @@ name: "Login",
         {
            axios.post('http://localhost:8000/api/auth/login', this.form)
             .then(res => {
-                console.log(res)
                 User.responseAfterLogin(res)
+                this.$router.push({name: 'dashboard'})
             })
             .catch(e => {
                 console.log(e.response)

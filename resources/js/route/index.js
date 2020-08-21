@@ -11,7 +11,6 @@ const routes = [
         path: '/',
         component: Login,
     },
-
     {
         path: '/register',
         component: Register,
@@ -20,6 +19,12 @@ const routes = [
     {
         path: '/forgot-password',
         component: ForgotPassword,
+    },
+
+    {
+        path: '/dashboard',
+        name: 'dashboard',
+        component: Dashboard,
     },
 
 
