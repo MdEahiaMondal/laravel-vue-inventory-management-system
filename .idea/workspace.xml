@@ -19,8 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8153077e-0fa6-4c3a-a28a-abed68885346" name="Default Changelist" comment="validation error show using sweetalert2 and make a helper function that help handle error message">
-      <change beforePath="$PROJECT_DIR$/resources/js/views/auth/Register.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/auth/Register.vue" afterDir="false" />
+    <list default="true" id="8153077e-0fa6-4c3a-a28a-abed68885346" name="Default Changelist" comment="register done">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Sidebar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Sidebar.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,7 +201,7 @@
       <workItem from="1597978478384" duration="1734000" />
       <workItem from="1597983608749" duration="885000" />
       <workItem from="1597989769955" duration="1262000" />
-      <workItem from="1597991139088" duration="6954000" />
+      <workItem from="1597991139088" duration="8115000" />
     </task>
     <task id="LOCAL-00001" summary="install laravel ui for vue">
       <created>1597924988497</created>
@@ -306,7 +308,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598006478777</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="register done">
+      <created>1598008457321</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1598008457321</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -343,7 +352,8 @@
     <MESSAGE value="after successfully loggedIn return redirect to dashboard" />
     <MESSAGE value="without loggedIn user can not access secure route" />
     <MESSAGE value="validation error show using sweetalert2 and make a helper function that help handle error message" />
-    <option name="LAST_COMMIT_MESSAGE" value="validation error show using sweetalert2 and make a helper function that help handle error message" />
+    <MESSAGE value="register done" />
+    <option name="LAST_COMMIT_MESSAGE" value="register done" />
   </component>
   <component name="WindowStateProjectService">
     <state x="292" y="119" key="FileChooserDialogImpl" timestamp="1597936442152">
@@ -354,9 +364,9 @@
       <screen x="0" y="0" width="1024" height="728" />
     </state>
     <state x="13" y="9" key="SettingsEditor/0.0.1024.728@0.0.1024.728" timestamp="1597924310673" />
-    <state x="104" y="93" key="Vcs.Push.Dialog.v2" timestamp="1598006480078">
+    <state x="104" y="93" key="Vcs.Push.Dialog.v2" timestamp="1598008458853">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
-    <state x="104" y="93" key="Vcs.Push.Dialog.v2/0.0.1024.728@0.0.1024.728" timestamp="1598006480078" />
+    <state x="104" y="93" key="Vcs.Push.Dialog.v2/0.0.1024.728@0.0.1024.728" timestamp="1598008458853" />
   </component>
 </project>

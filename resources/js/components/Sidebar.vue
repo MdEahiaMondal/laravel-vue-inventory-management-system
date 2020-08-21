@@ -89,19 +89,27 @@
             </div>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="charts.html">
-                <i class="fas fa-fw fa-chart-area"></i>
-                <span>Charts</span>
+            <a class="nav-link" href="#" @click.prevent="logout">
+                <i class="fa fa-sign-out-alt"></i>
+                <span>Logout</span>
             </a>
         </li>
-        <hr class="sidebar-divider">
-        <div class="version" id="version-ruangadmin"></div>
     </ul>
 </template>
 
 <script>
+import AppStorage from "../helpers/AppStorage";
+
 export default {
-name: "Sidebar"
+name: "Sidebar",
+    methods: {
+        logout()
+        {
+            AppStorage.clear()
+            Message.Toaster('Sign out Successfully ')
+            this.$router.push({path: '/'})
+        }
+    }
 }
 </script>
 
