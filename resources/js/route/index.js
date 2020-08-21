@@ -6,6 +6,12 @@ import Register from "../views/auth/Register";
 import ForgotPassword from "../views/auth/ForgotPassword";
 Vue.use(VueRouter)
 
+
+//employees
+import EmployIndex from "../views/employees/Index";
+import EmployCreate from "../views/employees/Create";
+
+
 const routes = [
     {
         path: '/',
@@ -34,6 +40,16 @@ const routes = [
         component: Dashboard,
     },
 
+    {
+        path: '/employees',
+        name: 'employees',
+        component: EmployIndex,
+    },
+    {
+        path: '/employees/create',
+        name: 'employ-create',
+        component: EmployCreate
+    }
 
 
 ]
