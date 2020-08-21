@@ -19,13 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8153077e-0fa6-4c3a-a28a-abed68885346" name="Default Changelist" comment="setup noty form notification">
-      <change afterPath="$PROJECT_DIR$/resources/js/views/employees/Create.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/views/employees/Index.vue" afterDir="false" />
+    <list default="true" id="8153077e-0fa6-4c3a-a28a-abed68885346" name="Default Changelist" comment="create route for employees">
+      <change afterPath="$PROJECT_DIR$/resources/js/views/layouts/Master.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Sidebar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Sidebar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/route/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/route/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/Dashboard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Dashboard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/employees/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/employees/Index.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,6 +165,8 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
@@ -204,7 +207,7 @@
       <workItem from="1597978478384" duration="1734000" />
       <workItem from="1597983608749" duration="885000" />
       <workItem from="1597989769955" duration="1262000" />
-      <workItem from="1597991139088" duration="14560000" />
+      <workItem from="1597991139088" duration="18467000" />
     </task>
     <task id="LOCAL-00001" summary="install laravel ui for vue">
       <created>1597924988497</created>
@@ -339,7 +342,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598022165191</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="create route for employees">
+      <created>1598029038617</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1598029038617</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -380,7 +390,8 @@
     <MESSAGE value="logout done" />
     <MESSAGE value="hide sidebar and topbar when user not logged in" />
     <MESSAGE value="setup noty form notification" />
-    <option name="LAST_COMMIT_MESSAGE" value="setup noty form notification" />
+    <MESSAGE value="create route for employees" />
+    <option name="LAST_COMMIT_MESSAGE" value="create route for employees" />
   </component>
   <component name="WindowStateProjectService">
     <state x="292" y="119" key="FileChooserDialogImpl" timestamp="1597936442152">
@@ -391,9 +402,9 @@
       <screen x="0" y="0" width="1024" height="728" />
     </state>
     <state x="13" y="9" key="SettingsEditor/0.0.1024.728@0.0.1024.728" timestamp="1597924310673" />
-    <state x="104" y="93" key="Vcs.Push.Dialog.v2" timestamp="1598022167037">
+    <state x="104" y="93" key="Vcs.Push.Dialog.v2" timestamp="1598029039924">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
-    <state x="104" y="93" key="Vcs.Push.Dialog.v2/0.0.1024.728@0.0.1024.728" timestamp="1598022167037" />
+    <state x="104" y="93" key="Vcs.Push.Dialog.v2/0.0.1024.728@0.0.1024.728" timestamp="1598029039924" />
   </component>
 </project>

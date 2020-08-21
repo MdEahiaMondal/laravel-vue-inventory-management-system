@@ -1,5 +1,5 @@
 <template>
-    <div class="dashboard">
+    <!--<div class="dashboard">
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
             <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
             <ol class="breadcrumb">
@@ -8,7 +8,7 @@
             </ol>
         </div>
         <div class="row mb-3">
-            <!-- Earnings (Monthly) Card Example -->
+            &lt;!&ndash; Earnings (Monthly) Card Example &ndash;&gt;
             <div class="col-xl-3 col-md-6 mb-4">
                 <div class="card h-100">
                     <div class="card-body">
@@ -28,7 +28,7 @@
                     </div>
                 </div>
             </div>
-            <!-- Earnings (Annual) Card Example -->
+            &lt;!&ndash; Earnings (Annual) Card Example &ndash;&gt;
             <div class="col-xl-3 col-md-6 mb-4">
                 <div class="card h-100">
                     <div class="card-body">
@@ -48,7 +48,7 @@
                     </div>
                 </div>
             </div>
-            <!-- New User Card Example -->
+            &lt;!&ndash; New User Card Example &ndash;&gt;
             <div class="col-xl-3 col-md-6 mb-4">
                 <div class="card h-100">
                     <div class="card-body">
@@ -68,7 +68,7 @@
                     </div>
                 </div>
             </div>
-            <!-- Pending Requests Card Example -->
+            &lt;!&ndash; Pending Requests Card Example &ndash;&gt;
             <div class="col-xl-3 col-md-6 mb-4">
                 <div class="card h-100">
                     <div class="card-body">
@@ -89,7 +89,7 @@
                 </div>
             </div>
 
-            <!-- Area Chart -->
+            &lt;!&ndash; Area Chart &ndash;&gt;
             <div class="col-xl-8 col-lg-7">
                 <div class="card mb-4">
                     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
@@ -99,7 +99,7 @@
                                aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
                             </a>
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                            <div class="dropdown-menu dropdown-menu-right shadow animated&#45;&#45;fade-in"
                                  aria-labelledby="dropdownMenuLink">
                                 <div class="dropdown-header">Dropdown Header:</div>
                                 <a class="dropdown-item" href="#">Action</a>
@@ -116,7 +116,7 @@
                     </div>
                 </div>
             </div>
-            <!-- Pie Chart -->
+            &lt;!&ndash; Pie Chart &ndash;&gt;
             <div class="col-xl-4 col-lg-5">
                 <div class="card mb-4">
                     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
@@ -126,7 +126,7 @@
                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Month <i class="fas fa-chevron-down"></i>
                             </a>
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                            <div class="dropdown-menu dropdown-menu-right shadow animated&#45;&#45;fade-in"
                                  aria-labelledby="dropdownMenuLink">
                                 <div class="dropdown-header">Select Periode</div>
                                 <a class="dropdown-item" href="#">Today</a>
@@ -189,7 +189,7 @@
                     </div>
                 </div>
             </div>
-            <!-- Invoice Example -->
+            &lt;!&ndash; Invoice Example &ndash;&gt;
             <div class="col-xl-8 col-lg-7 mb-4">
                 <div class="card">
                     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
@@ -250,7 +250,7 @@
                     <div class="card-footer"></div>
                 </div>
             </div>
-            <!-- Message From Customer-->
+            &lt;!&ndash; Message From Customer&ndash;&gt;
             <div class="col-xl-4 col-lg-5 ">
                 <div class="card">
                     <div class="card-header py-4 bg-primary d-flex flex-row align-items-center justify-content-between">
@@ -294,14 +294,14 @@
                 </div>
             </div>
         </div>
-        <!--Row-->
+        &lt;!&ndash;Row&ndash;&gt;
         <div class="row">
             <div class="col-lg-12 text-center">
                 <p>Do you like this template ? you can download from <a href="https://github.com/indrijunanda/RuangAdmin"
                                                                         class="btn btn-primary btn-sm" target="_blank"><i class="fab fa-fw fa-github"></i>&nbsp;GitHub</a></p>
             </div>
         </div>
-        <!-- Modal Logout -->
+        &lt;!&ndash; Modal Logout &ndash;&gt;
         <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelLogout"
              aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -322,7 +322,8 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
+    <h3>Dashboard</h3>
 </template>
 
 <script>

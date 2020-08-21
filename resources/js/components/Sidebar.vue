@@ -24,7 +24,7 @@
             </a>
             <div id="collapseBootstrap" class="collapse" aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
-                    <router-link class="collapse-item" :to="{name: 'employ-create'}">Create Employ</router-link>
+                    <router-link class="collapse-item" :to="{name: 'employees-create'}">Create Employ</router-link>
                     <router-link class="collapse-item" :to="{name: 'employees'}">Employees</router-link>
                 </div>
             </div>

@@ -37,19 +37,27 @@ const routes = [
     {
         path: '/dashboard',
         name: 'dashboard',
-        component: Dashboard,
+        component: () => import('../views/layouts/Master'),
+        children: [
+            {
+                path: '',
+                name: 'dashboard',
+                component: Dashboard,
+            },
+            {
+                path: 'employees',
+                name: 'employees',
+                component: EmployIndex,
+            },
+            {
+                path: 'employees/create',
+                name: 'employees-create',
+                component: EmployCreate,
+            },
+
+        ]
     },
 
-    {
-        path: '/employees',
-        name: 'employees',
-        component: EmployIndex,
-    },
-    {
-        path: '/employees/create',
-        name: 'employ-create',
-        component: EmployCreate
-    }
 
 
 ]
