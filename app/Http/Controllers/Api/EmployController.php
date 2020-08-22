@@ -35,7 +35,7 @@ class EmployController extends Controller
 
             $setName = time() . '.' .$ext;
             $img = Image::make($request->photo)->resize(240,200);
-            $upload_path = '/backend/uploads/employs/';
+            $upload_path = 'backend/uploads/employs/';
             $image_url = $upload_path.$setName;
             $img->save($image_url);
         }else{
@@ -74,6 +74,10 @@ class EmployController extends Controller
 
     public function destroy(Employ $employ)
     {
-        //
+        if ($employ->photo){
+            unlink($employ->photo);
+        }
+        $employ->delete();
+        return response()->json('deleted success', 200);
     }
 }

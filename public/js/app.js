@@ -2891,6 +2891,24 @@ __webpack_require__.r(__webpack_exports__);
       })["catch"](function (e) {
         console.log(e.response);
       });
+    },
+    deleteEmploy: function deleteEmploy(id) {
+      var _this3 = this;
+
+      Message.DeleteAction().then(function (res) {
+        if (res.isConfirmed) {
+          axios["delete"]('/api/employs/' + id).then(function (res) {
+            _this3.employees = _this3.employees.filter(function (item) {
+              return item.id !== id;
+            });
+            Message.Success(res.data);
+          })["catch"](function (e) {
+            if (e.response.status === 404) {
+              Message.Error('Not Found');
+            }
+          });
+        }
+      });
     }
   }
 });
@@ -45778,7 +45796,11 @@ var render = function() {
                       _vm._v(" "),
                       _c("td", [
                         _c("img", {
-                          attrs: { src: employ.photo, width: "100", alt: "" }
+                          attrs: {
+                            src: "/" + employ.photo,
+                            width: "100",
+                            alt: ""
+                          }
                         })
                       ]),
                       _vm._v(" "),
@@ -45790,7 +45812,31 @@ var render = function() {
                       _vm._v(" "),
                       _c("td", [_vm._v(_vm._s(employ.joining_date))]),
                       _vm._v(" "),
-                      _vm._m(3, true)
+                      _c("td", [
+                        _c(
+                          "a",
+                          {
+                            staticClass: "btn btn-sm btn-primary",
+                            attrs: { href: "#" }
+                          },
+                          [_vm._v("Edit")]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "a",
+                          {
+                            staticClass: "btn btn-sm btn-danger",
+                            attrs: { href: "#" },
+                            on: {
+                              click: function($event) {
+                                $event.preventDefault()
+                                return _vm.deleteEmploy(employ.id)
+                              }
+                            }
+                          },
+                          [_vm._v("Delete")]
+                        )
+                      ])
                     ])
                   }),
                   0
@@ -45852,20 +45898,6 @@ var staticRenderFns = [
         _c("th", [_vm._v("Joining date")]),
         _vm._v(" "),
         _c("th", [_vm._v("Action")])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("td", [
-      _c("a", { staticClass: "btn btn-sm btn-primary", attrs: { href: "#" } }, [
-        _vm._v("Edit")
-      ]),
-      _vm._v(" "),
-      _c("a", { staticClass: "btn btn-sm btn-danger", attrs: { href: "#" } }, [
-        _vm._v("Delete")
       ])
     ])
   }
@@ -61424,6 +61456,19 @@ var Message = /*#__PURE__*/function () {
 
       }).show();
     }
+  }, {
+    key: "DeleteAction",
+    value: function DeleteAction() {
+      return Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+      });
+    }
   }]);
 
   return Message;
@@ -61579,6 +61624,7 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
 
+window.Swal = sweetalert2__WEBPACK_IMPORTED_MODULE_0___default.a;
 
 var _Toast = sweetalert2__WEBPACK_IMPORTED_MODULE_0___default.a.mixin({
   toast: true,

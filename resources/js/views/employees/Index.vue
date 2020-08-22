@@ -39,14 +39,14 @@
                         <tbody>
                         <tr v-for="(employ, index) in allEmployes" :key="employ.id">
                             <td>{{ index + 1 }}</td>
-                            <td><img :src="employ.photo" width="100" alt=""></td>
+                            <td><img :src="'/'+ employ.photo" width="100" alt=""></td>
                             <td>{{ employ.name }}</td>
                             <td>{{ employ.phone }}</td>
                             <td>{{ employ.salary }}</td>
                             <td>{{ employ.joining_date }}</td>
                             <td>
                                 <a href="#" class="btn btn-sm btn-primary">Edit</a>
-                                <a href="#" class="btn btn-sm btn-danger">Delete</a>
+                                <a @click.prevent="deleteEmploy(employ.id)" href="#" class="btn btn-sm btn-danger">Delete</a>
                             </td>
                         </tr>
                         </tbody>
@@ -87,6 +87,25 @@ export default {
             })
             .catch(e => {
                 console.log(e.response)
+            })
+        },
+        deleteEmploy(id){
+            Message.DeleteAction()
+            .then(res => {
+               if (res.isConfirmed){
+                   axios.delete('/api/employs/' + id)
+                   .then(res => {
+                       this.employees = this.employees.filter(item => {
+                           return item.id !== id
+                       })
+                       Message.Success(res.data)
+                   })
+                   .catch(e => {
+                       if (e.response.status === 404){
+                           Message.Error('Not Found')
+                       }
+                   })
+               }
             })
         }
     }
