@@ -11,6 +11,14 @@
     <div class="row">
         <div class="col-lg-12 mb-4">
             <!-- Simple Tables -->
+
+            <table class="">
+                <tr>
+                    <td><input type="text" class="form-control" v-model="searchText"></td>
+                    <td><button class="btn btn-primary"><i class="fa fa-search"></i></button></td>
+                </tr>
+            </table>
+            <br>
             <div class="card">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                     <h6 class="m-0 font-weight-bold text-primary">Employees</h6>
@@ -29,7 +37,7 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr v-for="(employ, index) in employees" :key="employ.id">
+                        <tr v-for="(employ, index) in allEmployes" :key="employ.id">
                             <td>{{ index + 1 }}</td>
                             <td><img :src="employ.photo" width="100" alt=""></td>
                             <td>{{ employ.name }}</td>
@@ -60,8 +68,16 @@ export default {
     name: "Index",
     data(){
         return {
-            employees: []
+            employees: [],
+            searchText: ''
         }
+    },
+    computed: {
+      allEmployes(){
+          return this.employees.filter(item => {
+              return item.name.toLowerCase().match(this.searchText.toLowerCase())
+          })
+      }
     },
     methods: {
         allEmployees(){

@@ -2854,6 +2854,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   created: function created() {
     this.allEmployees();
@@ -2861,15 +2869,25 @@ __webpack_require__.r(__webpack_exports__);
   name: "Index",
   data: function data() {
     return {
-      employees: []
+      employees: [],
+      searchText: ''
     };
+  },
+  computed: {
+    allEmployes: function allEmployes() {
+      var _this = this;
+
+      return this.employees.filter(function (item) {
+        return item.name.toLowerCase().match(_this.searchText.toLowerCase());
+      });
+    }
   },
   methods: {
     allEmployees: function allEmployees() {
-      var _this = this;
+      var _this2 = this;
 
       axios.get('/api/employs').then(function (res) {
-        _this.employees = res.data;
+        _this2.employees = res.data;
       })["catch"](function (e) {
         console.log(e.response);
       });
@@ -45710,19 +45728,51 @@ var render = function() {
     _vm._v(" "),
     _c("div", { staticClass: "row" }, [
       _c("div", { staticClass: "col-lg-12 mb-4" }, [
+        _c("table", {}, [
+          _c("tr", [
+            _c("td", [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.searchText,
+                    expression: "searchText"
+                  }
+                ],
+                staticClass: "form-control",
+                attrs: { type: "text" },
+                domProps: { value: _vm.searchText },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.searchText = $event.target.value
+                  }
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _vm._m(0)
+          ])
+        ]),
+        _vm._v(" "),
+        _c("br"),
+        _vm._v(" "),
         _c("div", { staticClass: "card" }, [
-          _vm._m(0),
+          _vm._m(1),
           _vm._v(" "),
           _c("div", { staticClass: "table-responsive" }, [
             _c(
               "table",
               { staticClass: "table align-items-center table-flush" },
               [
-                _vm._m(1),
+                _vm._m(2),
                 _vm._v(" "),
                 _c(
                   "tbody",
-                  _vm._l(_vm.employees, function(employ, index) {
+                  _vm._l(_vm.allEmployes, function(employ, index) {
                     return _c("tr", { key: employ.id }, [
                       _c("td", [_vm._v(_vm._s(index + 1))]),
                       _vm._v(" "),
@@ -45740,7 +45790,7 @@ var render = function() {
                       _vm._v(" "),
                       _c("td", [_vm._v(_vm._s(employ.joining_date))]),
                       _vm._v(" "),
-                      _vm._m(2, true)
+                      _vm._m(3, true)
                     ])
                   }),
                   0
@@ -45756,6 +45806,16 @@ var render = function() {
   ])
 }
 var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", [
+      _c("button", { staticClass: "btn btn-primary" }, [
+        _c("i", { staticClass: "fa fa-search" })
+      ])
+    ])
+  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
