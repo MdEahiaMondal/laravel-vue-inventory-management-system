@@ -19,19 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8153077e-0fa6-4c3a-a28a-abed68885346" name="Default Changelist" comment="file read ok">
-      <change afterPath="$PROJECT_DIR$/public/backend/uploads/employs/1598074587.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/backend/uploads/employs/1598074611.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/laravue_inventory.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravue_inventory.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="8153077e-0fa6-4c3a-a28a-abed68885346" name="Default Changelist" comment="employ create success">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/EmployController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/EmployController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_22_042103_create_employs_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_22_042103_create_employs_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/employees/Create.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/employees/Create.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/employees/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/employees/Index.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,6 +208,7 @@
       <workItem from="1597989769955" duration="1262000" />
       <workItem from="1597991139088" duration="20788000" />
       <workItem from="1598063309989" duration="7354000" />
+      <workItem from="1598078297024" duration="2541000" />
     </task>
     <task id="LOCAL-00001" summary="install laravel ui for vue">
       <created>1597924988497</created>
@@ -392,7 +385,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598072556728</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="employ create success">
+      <created>1598078340650</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1598078340650</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -414,7 +414,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="install laravel ui for vue" />
     <MESSAGE value="backend template setup done" />
     <MESSAGE value="link vue to laravel welcome pages" />
     <MESSAGE value="vue templating done and install vue-router and setup" />
@@ -439,7 +438,8 @@
     <MESSAGE value="create employ vue component" />
     <MESSAGE value="create employ model all" />
     <MESSAGE value="file read ok" />
-    <option name="LAST_COMMIT_MESSAGE" value="file read ok" />
+    <MESSAGE value="employ create success" />
+    <option name="LAST_COMMIT_MESSAGE" value="employ create success" />
   </component>
   <component name="WindowStateProjectService">
     <state x="292" y="119" key="FileChooserDialogImpl" timestamp="1597936442152">
@@ -450,9 +450,9 @@
       <screen x="0" y="0" width="1024" height="728" />
     </state>
     <state x="13" y="9" key="SettingsEditor/0.0.1024.728@0.0.1024.728" timestamp="1597924310673" />
-    <state x="104" y="93" key="Vcs.Push.Dialog.v2" timestamp="1598072558171">
+    <state x="104" y="93" key="Vcs.Push.Dialog.v2" timestamp="1598078342335">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
-    <state x="104" y="93" key="Vcs.Push.Dialog.v2/0.0.1024.728@0.0.1024.728" timestamp="1598072558171" />
+    <state x="104" y="93" key="Vcs.Push.Dialog.v2/0.0.1024.728@0.0.1024.728" timestamp="1598078342335" />
   </component>
 </project>

@@ -12,7 +12,8 @@ class EmployController extends Controller
 
     public function index()
     {
-        //
+        $employes = Employ::all();
+        return response()->json($employes, 200);
     }
 
 
@@ -34,7 +35,7 @@ class EmployController extends Controller
 
             $setName = time() . '.' .$ext;
             $img = Image::make($request->photo)->resize(240,200);
-            $upload_path = 'backend/uploads/employs/';
+            $upload_path = '/backend/uploads/employs/';
             $image_url = $upload_path.$setName;
             $img->save($image_url);
         }else{
