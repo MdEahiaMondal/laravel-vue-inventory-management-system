@@ -23,6 +23,12 @@ import CategoryCreate from "../views/categories/Create";
 import CategoryEdit from "../views/categories/Edit";
 
 
+//products
+import ProductIndex from "../views/products/Index";
+import ProductCreate from "../views/products/Create";
+import ProductEdit from "../views/products/Edit";
+
+
 const routes = [
     {
         path: '/',
@@ -131,6 +137,23 @@ const routes = [
                 path: 'categories/edit/:id',
                 name: 'categories-edit',
                 component: CategoryEdit,
+            },
+
+
+            {
+                path: 'products',
+                name: 'products',
+                component: ProductIndex,
+            },
+            {
+                path: 'products/create',
+                name: 'products-create',
+                component: ProductCreate,
+            },
+            {
+                path: 'products/edit/:id',
+                name: 'products-edit',
+                component: ProductEdit,
             },
         ]
     },
