@@ -13,10 +13,12 @@
                                 <div class="col-md-6">
                                     <label for="name">Name</label>
                                     <input type="text" v-model="employ.name" class="form-control" id="name">
+                                    <small class="text-danger" v-if="errors.name">{{ errors.name[0] }}</small>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="Email">Email</label>
                                     <input type="email" v-model="employ.email" class="form-control" id="Email">
+                                    <small class="text-danger" v-if="errors.email">{{ errors.email[0] }}</small>
                                 </div>
                             </div>
                         </div>
@@ -25,10 +27,12 @@
                                 <div class="col-md-6">
                                     <label for="Phone">Phone</label>
                                     <input type="text" v-model="employ.phone" class="form-control" id="Phone">
+                                    <small class="text-danger" v-if="errors.phone">{{ errors.phone[0] }}</small>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="Salary">Salary</label>
                                     <input type="number" v-model="employ.salary" class="form-control" id="Salary">
+                                    <small class="text-danger" v-if="errors.salary">{{ errors.salary[0] }}</small>
                                 </div>
                             </div>
                         </div>
@@ -37,6 +41,7 @@
                                 <div class="col-md-6">
                                     <label for="date">Joining Date</label>
                                     <input type="date" v-model="employ.joining_date" class="form-control" id="date">
+                                    <small class="text-danger" v-if="errors.joining_date">{{ errors.joining_date[0] }}</small>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="NID">NID</label>
@@ -50,6 +55,7 @@
                                 <div class="col-md-12">
                                     <label for="address">Address</label>
                                     <textarea  class="form-control" v-model="employ.address" id="address"></textarea>
+                                    <small class="text-danger" v-if="errors.address">{{ errors.address[0] }}</small>
                                 </div>
                             </div>
                         </div>
@@ -124,7 +130,11 @@ export default {
                 this.$router.push({name: 'employees'})
             })
             .catch(e => {
-                console.log(e.response)
+                if (e.response.status === 422){
+                    this.errors = e.response.data.errors
+                }else{
+                    console.log(e.response)
+                }
             })
         }
     }

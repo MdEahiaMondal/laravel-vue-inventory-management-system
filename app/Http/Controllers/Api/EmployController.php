@@ -82,7 +82,9 @@ class EmployController extends Controller
             $upload_path = 'backend/uploads/employs/';
             $image_url = $upload_path.$setName;
             $img->save($image_url);
-            unlink($employ->photo);
+            if ($employ->photo){
+                unlink($employ->photo);
+            }
         }else{
             $image_url = $employ->photo;
         }

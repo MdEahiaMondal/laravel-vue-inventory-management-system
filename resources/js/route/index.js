@@ -12,6 +12,11 @@ import EmployIndex from "../views/employees/Index";
 import EmployCreate from "../views/employees/Create";
 import EmployEdit from "../views/employees/Edit";
 
+//suppliers
+import SupplierIndex from "../views/suppliers/Index";
+import SupplierCreate from "../views/suppliers/Create";
+import SupplierEdit from "../views/suppliers/Edit";
+
 
 const routes = [
     {
@@ -87,6 +92,22 @@ const routes = [
                 path: 'employees/edit/:id',
                 name: 'employees-edit',
                 component: EmployEdit,
+            },
+
+            {
+                path: 'suppliers',
+                name: 'suppliers',
+                component: SupplierIndex,
+            },
+            {
+                path: 'suppliers/create',
+                name: 'suppliers-create',
+                component: SupplierCreate,
+            },
+            {
+                path: 'suppliers/edit/:id',
+                name: 'suppliers-edit',
+                component: SupplierEdit,
             },
         ]
     },

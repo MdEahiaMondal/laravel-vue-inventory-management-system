@@ -19,15 +19,29 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8153077e-0fa6-4c3a-a28a-abed68885346" name="Default Changelist" comment="delete employ">
-      <change afterPath="$PROJECT_DIR$/public/backend/uploads/employs/1598089372.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/backend/uploads/employs/1598089398.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/views/employees/Edit.vue" afterDir="false" />
+    <list default="true" id="8153077e-0fa6-4c3a-a28a-abed68885346" name="Default Changelist" comment="employ updated ok">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/SupplierController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Model/Supplier.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/factories/SupplierFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_08_22_113346_create_suppliers_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/SupplierSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/backend/uploads/employs/1598092561.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/backend/uploads/employs/1598092571.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/backend/uploads/employs/1598092581.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/backend/uploads/suppliers/1598097518.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/backend/uploads/suppliers/1598097551.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/views/suppliers/Create.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/views/suppliers/Edit.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/views/suppliers/Index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/EmployController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/EmployController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_22_042103_create_employs_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_08_22_042103_create_employs_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Sidebar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Sidebar.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/route/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/route/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/employees/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/employees/Index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/employees/Create.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/employees/Create.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/employees/Edit.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/employees/Edit.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,12 +190,13 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../laravel-vue-pass" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/js/views" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\laravel\htdocs\laravue_inventory\resources\js\views" />
       <recent name="F:\laravel\htdocs\laravue_inventory\resources\js\views\employees" />
       <recent name="F:\laravel\htdocs\laravue_inventory\public\backend" />
       <recent name="F:\laravel\htdocs\laravue_inventory" />
@@ -213,7 +228,7 @@
       <workItem from="1597989769955" duration="1262000" />
       <workItem from="1597991139088" duration="20788000" />
       <workItem from="1598063309989" duration="7354000" />
-      <workItem from="1598078297024" duration="8006000" />
+      <workItem from="1598078297024" duration="10835000" />
     </task>
     <task id="LOCAL-00001" summary="install laravel ui for vue">
       <created>1597924988497</created>
@@ -418,7 +433,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598089433031</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="employ updated ok">
+      <created>1598092541810</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1598092541810</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -440,7 +462,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="auth vue created done" />
     <MESSAGE value="implement jwt token" />
     <MESSAGE value="vue set history mode" />
     <MESSAGE value="signup done with api" />
@@ -465,9 +486,18 @@
     <MESSAGE value="employ data read ok" />
     <MESSAGE value="search all using javascript" />
     <MESSAGE value="delete employ" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete employ" />
+    <MESSAGE value="employ updated ok" />
+    <option name="LAST_COMMIT_MESSAGE" value="employ updated ok" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="251" y="154" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1598097466703">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state x="251" y="154" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1024.728@0.0.1024.728" timestamp="1598097466703" />
+    <state x="242" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1598096290065">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state x="242" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1024.728@0.0.1024.728" timestamp="1598096290065" />
     <state x="292" y="119" key="FileChooserDialogImpl" timestamp="1598091391959">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
@@ -476,9 +506,9 @@
       <screen x="0" y="0" width="1024" height="728" />
     </state>
     <state x="13" y="9" key="SettingsEditor/0.0.1024.728@0.0.1024.728" timestamp="1597924310673" />
-    <state x="104" y="93" key="Vcs.Push.Dialog.v2" timestamp="1598089434565">
+    <state x="104" y="93" key="Vcs.Push.Dialog.v2" timestamp="1598092543484">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
-    <state x="104" y="93" key="Vcs.Push.Dialog.v2/0.0.1024.728@0.0.1024.728" timestamp="1598089434565" />
+    <state x="104" y="93" key="Vcs.Push.Dialog.v2/0.0.1024.728@0.0.1024.728" timestamp="1598092543484" />
   </component>
 </project>

@@ -4,20 +4,20 @@
             <!-- Form Basic -->
             <div class="card mb-4">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">Eploye Create</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Supplier Edit</h6>
                 </div>
                 <div class="card-body">
-                    <form @submit.prevent="employInsert" enctype="multipart/form-data">
+                    <form @submit.prevent="supplierUpdate" enctype="multipart/form-data">
                         <div class="form-group">
                             <div class="form-row">
                                 <div class="col-md-6">
                                     <label for="name">Name</label>
-                                    <input type="text" v-model="employ.name" class="form-control" id="name">
+                                    <input type="text" v-model="supplier.name" class="form-control" id="name">
                                     <small class="text-danger" v-if="errors.name">{{ errors.name[0] }}</small>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="Email">Email</label>
-                                    <input type="email" v-model="employ.email" class="form-control" id="Email">
+                                    <input type="email" v-model="supplier.email" class="form-control" id="Email">
                                     <small class="text-danger" v-if="errors.email">{{ errors.email[0] }}</small>
                                 </div>
                             </div>
@@ -26,26 +26,12 @@
                             <div class="form-row">
                                 <div class="col-md-6">
                                     <label for="Phone">Phone</label>
-                                    <input type="text" v-model="employ.phone" class="form-control" id="Phone">
+                                    <input type="text" v-model="supplier.phone" class="form-control" id="Phone">
                                     <small class="text-danger" v-if="errors.phone">{{ errors.phone[0] }}</small>
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="Salary">Salary</label>
-                                    <input type="number" v-model="employ.salary" class="form-control" id="Salary">
-                                    <small class="text-danger" v-if="errors.salary">{{ errors.salary[0] }}</small>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="form-row">
-                                <div class="col-md-6">
-                                    <label for="date">Joining Date</label>
-                                    <input type="date" v-model="employ.joining_date" class="form-control" id="date">
-                                    <small class="text-danger" v-if="errors.joining_date">{{ errors.joining_date[0] }}</small>
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="NID">NID</label>
-                                    <input type="text" v-model="employ.nid" class="form-control" id="NID">
+                                    <label for="Salary">Shop Name</label>
+                                    <input type="text" v-model="supplier.shop_name" class="form-control" id="Salary">
                                 </div>
                             </div>
                         </div>
@@ -54,7 +40,7 @@
                             <div class="form-row">
                                 <div class="col-md-12">
                                     <label for="address">Address</label>
-                                    <textarea  class="form-control" v-model="employ.address" id="address"></textarea>
+                                    <textarea  class="form-control" v-model="supplier.address" id="address"></textarea>
                                     <small class="text-danger" v-if="errors.address">{{ errors.address[0] }}</small>
                                 </div>
                             </div>
@@ -69,11 +55,12 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <img :src="employ.photo" style="width: 80px; height: 80px" alt="image">
+                                    <img ref="editPhotoSrc" v-if="edit" :src="'/' +supplier.photo" style="width: 80px; height: 80px" alt="image">
+                                    <img ref="editPhotoSrc" v-else :src="supplier.photo" style="width: 80px; height: 80px" alt="image">
                                 </div>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary">Update</button>
                     </form>
                 </div>
             </div>
@@ -83,20 +70,25 @@
 
 <script>
 export default {
-name: "Create",
+    created() {
+        axios.get('/api/suppliers/'+ this.$route.params.id)
+        .then(res => {
+            this.supplier = res.data
+        })
+    },
+    name: "Create",
     data(){
         return {
-            employ: {
+            supplier: {
                 name: '',
                 email: '',
                 phone: '',
-                salary: '',
+                shop_name: '',
                 address: '',
                 photo: '',
-                nid: '',
-                joining_date: ''
             },
-            errors: []
+            errors: [],
+            edit: true
         }
     },
     methods: {
@@ -108,17 +100,18 @@ name: "Create",
             }else{
                 let reader = new FileReader()
                 reader.onload = (event) => {
-                    this.employ.photo = event.target.result
+                    this.edit = false
+                    this.supplier.photo = event.target.result
                 }
                 reader.readAsDataURL(real_file)
             }
         },
-        employInsert()
+        supplierUpdate()
         {
-            axios.post('/api/employs', this.employ)
+            axios.patch('/api/suppliers/' + this.$route.params.id, this.supplier)
             .then(res => {
                 Message.Success(res.data)
-                this.$router.push({name: 'employees'})
+                this.$router.push({name: 'suppliers'})
             })
             .catch(e => {
                 if (e.response.status === 422){
