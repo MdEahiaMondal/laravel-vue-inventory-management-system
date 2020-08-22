@@ -43,6 +43,19 @@
             </div>
         </li>
         <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#CategoryBootstrap"
+               aria-expanded="true" aria-controls="CategoryBootstrap">
+                <i class="far fa-fw fa-window-maximize"></i>
+                <span>Manage Categories</span>
+            </a>
+            <div id="CategoryBootstrap" class="collapse" aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <router-link class="collapse-item" :to="{name: 'categories-create'}">Create Category</router-link>
+                    <router-link class="collapse-item" :to="{name: 'categories'}">Categories</router-link>
+                </div>
+            </div>
+        </li>
+        <li class="nav-item">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseForm" aria-expanded="true"
                aria-controls="collapseForm">
                 <i class="fab fa-fw fa-wpforms"></i>
