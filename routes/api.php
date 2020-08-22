@@ -8,3 +8,6 @@ Route::group(['middleware' => 'api', 'namespace' => 'Api\Auth', 'prefix' => 'aut
     Route::post('refresh', 'AuthController@refresh');
     Route::post('me', 'AuthController@me');
 });
+
+
+Route::apiResource('employs', 'Api\EmployController');

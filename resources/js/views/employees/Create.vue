@@ -109,7 +109,14 @@ name: "Create",
         },
         employInsert()
         {
-            alert('ok')
+            axios.post('/api/employs', this.employ)
+            .then(res => {
+                Message.Success(res.data)
+                this.$router.push({name: 'employees'})
+            })
+            .catch(e => {
+                console.log(e.response)
+            })
         }
     }
 }

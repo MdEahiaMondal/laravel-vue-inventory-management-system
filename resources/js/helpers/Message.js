@@ -9,13 +9,12 @@ class Message{
         sweetalert2.Toast(message, type)
     }
 
-    Success()
+    Success(message)
     {
         new Noty({
             type: 'success', // string
             layout: 'topRight', // string
-            text: 'Some notification text', // string
-            theme: 'bootstrap-v3',
+            text: message, // string
             timeout: 2000, // boolean,int
             progressBar: true // boolean,int
         }).show();
@@ -25,7 +24,6 @@ class Message{
             type: 'alert',
             layout: 'topRight',
             text: 'Some notification text',
-            theme: 'bootstrap-v3',
             timeout: 'bootstrap-v3',
         }).show();
     }

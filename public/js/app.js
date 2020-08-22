@@ -2774,7 +2774,17 @@ __webpack_require__.r(__webpack_exports__);
       }
     },
     employInsert: function employInsert() {
-      alert('ok');
+      var _this2 = this;
+
+      axios.post('/api/employs', this.employ).then(function (res) {
+        Message.Success(res.data);
+
+        _this2.$router.push({
+          name: 'employees'
+        });
+      })["catch"](function (e) {
+        console.log(e.response);
+      });
     }
   }
 });
@@ -61086,15 +61096,14 @@ var Message = /*#__PURE__*/function () {
     }
   }, {
     key: "Success",
-    value: function Success() {
+    value: function Success(message) {
       new noty__WEBPACK_IMPORTED_MODULE_1___default.a({
         type: 'success',
         // string
         layout: 'topRight',
         // string
-        text: 'Some notification text',
+        text: message,
         // string
-        theme: 'bootstrap-v3',
         timeout: 2000,
         // boolean,int
         progressBar: true // boolean,int
@@ -61108,7 +61117,6 @@ var Message = /*#__PURE__*/function () {
         type: 'alert',
         layout: 'topRight',
         text: 'Some notification text',
-        theme: 'bootstrap-v3',
         timeout: 'bootstrap-v3'
       }).show();
     }
