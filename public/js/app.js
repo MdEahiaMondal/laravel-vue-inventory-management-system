@@ -2756,6 +2756,23 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   methods: {
+    fileUpload: function fileUpload(event) {
+      var _this = this;
+
+      var real_file = event.target.files[0];
+
+      if (real_file.size > 1040770) {
+        Message.Error('Please select image file size less then 1 MB');
+      } else {
+        var reader = new FileReader();
+
+        reader.onload = function (event) {
+          _this.employ.photo = event.target.result;
+        };
+
+        reader.readAsDataURL(real_file);
+      }
+    },
     employInsert: function employInsert() {
       alert('ok');
     }
@@ -45502,7 +45519,35 @@ var render = function() {
                 ])
               ]),
               _vm._v(" "),
-              _vm._m(1),
+              _c("div", { staticClass: "form-group" }, [
+                _c("div", { staticClass: "form-row" }, [
+                  _c("div", { staticClass: "col-md-6" }, [
+                    _c("div", { staticClass: "custom-file" }, [
+                      _c("input", {
+                        staticClass: "custom-file-input",
+                        attrs: { type: "file", id: "customFile" },
+                        on: { change: _vm.fileUpload }
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "label",
+                        {
+                          staticClass: "custom-file-label",
+                          attrs: { for: "customFile" }
+                        },
+                        [_vm._v("Choose file")]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-6" }, [
+                    _c("img", {
+                      staticStyle: { width: "80px", height: "80px" },
+                      attrs: { src: _vm.employ.photo, alt: "image" }
+                    })
+                  ])
+                ])
+              ]),
               _vm._v(" "),
               _c(
                 "button",
@@ -45533,36 +45578,6 @@ var staticRenderFns = [
         ])
       ]
     )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "form-group" }, [
-      _c("div", { staticClass: "form-row" }, [
-        _c("div", { staticClass: "col-md-6" }, [
-          _c("div", { staticClass: "custom-file" }, [
-            _c("input", {
-              staticClass: "custom-file-input",
-              attrs: { type: "file", id: "customFile" }
-            }),
-            _vm._v(" "),
-            _c(
-              "label",
-              {
-                staticClass: "custom-file-label",
-                attrs: { for: "customFile" }
-              },
-              [_vm._v("Choose file")]
-            )
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-md-6" }, [
-          _c("img", { attrs: { src: "", width: "200", alt: "image" } })
-        ])
-      ])
-    ])
   }
 ]
 render._withStripped = true
@@ -61099,15 +61114,14 @@ var Message = /*#__PURE__*/function () {
     }
   }, {
     key: "Warning",
-    value: function Warning() {
+    value: function Warning(message) {
       new noty__WEBPACK_IMPORTED_MODULE_1___default.a({
         type: 'warning',
         // string  	alert, success, error, warning, info
         layout: 'topRight',
         // string
-        text: 'Some notification text',
+        text: message,
         // string
-        theme: 'bootstrap-v3',
         timeout: 2000,
         // boolean,int
         progressBar: true // boolean,int
@@ -61116,15 +61130,14 @@ var Message = /*#__PURE__*/function () {
     }
   }, {
     key: "Error",
-    value: function Error() {
+    value: function Error(message) {
       new noty__WEBPACK_IMPORTED_MODULE_1___default.a({
         type: 'error',
         // string  	alert, success, error, warning, info
         layout: 'topRight',
         // string
-        text: 'Some notification text',
+        text: message,
         // string
-        theme: 'bootstrap-v3',
         timeout: 2000,
         // boolean,int
         progressBar: true // boolean,int
@@ -61133,15 +61146,14 @@ var Message = /*#__PURE__*/function () {
     }
   }, {
     key: "Info",
-    value: function Info() {
+    value: function Info(message) {
       new noty__WEBPACK_IMPORTED_MODULE_1___default.a({
         type: 'info',
         // string  	alert, success, error, warning, info
         layout: 'topRight',
         // string
-        text: 'Some notification text',
+        text: message,
         // string
-        theme: 'bootstrap-v3',
         timeout: 2000,
         // boolean,int
         progressBar: true // boolean,int

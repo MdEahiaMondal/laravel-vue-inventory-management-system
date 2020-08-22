@@ -30,34 +30,31 @@ class Message{
         }).show();
     }
 
-    Warning(){
+    Warning(message){
         new Noty({
             type: 'warning', // string  	alert, success, error, warning, info
             layout: 'topRight', // string
-            text: 'Some notification text', // string
-            theme: 'bootstrap-v3',
+            text: message, // string
             timeout: 2000, // boolean,int
             progressBar: true // boolean,int
         }).show();
     }
 
-    Error(){
+    Error(message){
         new Noty({
             type: 'error', // string  	alert, success, error, warning, info
             layout: 'topRight', // string
-            text: 'Some notification text', // string
-            theme: 'bootstrap-v3',
+            text: message, // string
             timeout: 2000, // boolean,int
             progressBar: true // boolean,int
         }).show();
     }
 
-    Info(){
+    Info(message){
         new Noty({
             type: 'info', // string  	alert, success, error, warning, info
             layout: 'topRight', // string
-            text: 'Some notification text', // string
-            theme: 'bootstrap-v3',
+            text: message, // string
             timeout: 2000, // boolean,int
             progressBar: true // boolean,int
         }).show();

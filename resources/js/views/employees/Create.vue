@@ -58,12 +58,12 @@
                             <div class="form-row">
                                 <div class="col-md-6">
                                     <div class="custom-file">
-                                        <input  type="file" class="custom-file-input" id="customFile">
+                                        <input @change="fileUpload"  type="file" class="custom-file-input" id="customFile">
                                         <label class="custom-file-label" for="customFile">Choose file</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <img src="" width="200" alt="image">
+                                    <img :src="employ.photo" style="width: 80px; height: 80px" alt="image">
                                 </div>
                             </div>
                         </div>
@@ -94,6 +94,19 @@ name: "Create",
         }
     },
     methods: {
+        fileUpload(event)
+        {
+            const real_file = event.target.files[0]
+            if (real_file.size > 1040770){
+                Message.Error('Please select image file size less then 1 MB')
+            }else{
+                let reader = new FileReader()
+                reader.onload = (event) => {
+                    this.employ.photo = event.target.result
+                }
+                reader.readAsDataURL(real_file)
+            }
+        },
         employInsert()
         {
             alert('ok')
