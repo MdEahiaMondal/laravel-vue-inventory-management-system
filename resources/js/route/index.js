@@ -10,6 +10,7 @@ Vue.use(VueRouter)
 //employees
 import EmployIndex from "../views/employees/Index";
 import EmployCreate from "../views/employees/Create";
+import EmployEdit from "../views/employees/Edit";
 
 
 const routes = [
@@ -82,7 +83,11 @@ const routes = [
                 name: 'employees-create',
                 component: EmployCreate,
             },
-
+            {
+                path: 'employees/edit/:id',
+                name: 'employees-edit',
+                component: EmployEdit,
+            },
         ]
     },
 

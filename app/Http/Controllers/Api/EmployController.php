@@ -57,18 +57,46 @@ class EmployController extends Controller
 
     public function show(Employ $employ)
     {
-        //
-    }
-
-
-    public function edit(Employ $employ)
-    {
-        //
+        return response()->json($employ, 200);
     }
 
     public function update(Request $request, Employ $employ)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required|unique:employs,name,'.$employ->id,
+            'email' => 'required|unique:employs,email,'.$employ->id,
+            'phone' => 'required|unique:employs,phone,'.$employ->id,
+            'address' => 'required',
+            'salary' => 'required|integer',
+            'joining_date' => 'required',
+        ]);
+
+
+        if ($request->photo != $employ->photo){
+            $position = strpos($request->photo, ';');
+            $sub = substr($request->photo, 0,$position);
+            $ext = explode('/', $sub)[1];
+
+            $setName = time() . '.' .$ext;
+            $img = Image::make($request->photo)->resize(240,200);
+            $upload_path = 'backend/uploads/employs/';
+            $image_url = $upload_path.$setName;
+            $img->save($image_url);
+            unlink($employ->photo);
+        }else{
+            $image_url = $employ->photo;
+        }
+
+        $employ->name = $request->name;
+        $employ->email = $request->email;
+        $employ->photo = $image_url;
+        $employ->phone = $request->phone;
+        $employ->address = $request->address;
+        $employ->nid = $request->nid;
+        $employ->salary = $request->salary;
+        $employ->joining_date = $request->joining_date;
+        $employ->save();
+        return response()->json('successfully updated', 200);
     }
 
 
