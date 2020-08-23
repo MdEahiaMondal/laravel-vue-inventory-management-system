@@ -29,6 +29,12 @@ import ProductCreate from "../views/products/Create";
 import ProductEdit from "../views/products/Edit";
 
 
+//expenses
+import ExpenseIndex from "../views/expenses/Index";
+import ExpenseCreate from "../views/expenses/Create";
+import ExpenseEdit from "../views/expenses/Edit";
+
+
 const routes = [
     {
         path: '/',
@@ -154,6 +160,23 @@ const routes = [
                 path: 'products/edit/:id',
                 name: 'products-edit',
                 component: ProductEdit,
+            },
+
+
+            {
+                path: 'expenses',
+                name: 'expenses',
+                component: ExpenseIndex,
+            },
+            {
+                path: 'expenses/create',
+                name: 'expenses-create',
+                component: ExpenseCreate,
+            },
+            {
+                path: 'expenses/edit/:id',
+                name: 'expenses-edit',
+                component: ExpenseEdit,
             },
         ]
     },

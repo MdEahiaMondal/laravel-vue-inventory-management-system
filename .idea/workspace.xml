@@ -19,17 +19,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8153077e-0fa6-4c3a-a28a-abed68885346" name="Default Changelist" comment="category crude done">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/ProductController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Model/Product.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/factories/ProductFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_08_22_143452_create_products_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/ProductSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/views/products/Create.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/views/products/Edit.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/views/products/Index.vue" afterDir="false" />
+    <list default="true" id="8153077e-0fa6-4c3a-a28a-abed68885346" name="Default Changelist" comment="product crude done">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/ExpenseController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Model/Expense.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/factories/ExpenseFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_08_22_233923_create_expenses_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/ExpenseSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/views/expenses/Create.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/views/expenses/Edit.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/views/expenses/Index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/Sidebar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Sidebar.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/route/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/route/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
@@ -186,15 +185,15 @@
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\laravel\htdocs\laravue_inventory\app\Http\Controllers\Api" />
+      <recent name="F:\laravel\htdocs\laravue_inventory\app\Http\Controllers\Api\Auth" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\laravel\htdocs\laravue_inventory\resources\js\views" />
       <recent name="F:\laravel\htdocs\laravue_inventory\resources\js\views\employees" />
       <recent name="F:\laravel\htdocs\laravue_inventory\public\backend" />
       <recent name="F:\laravel\htdocs\laravue_inventory" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\laravel\htdocs\laravue_inventory\app\Http\Controllers\Api" />
-      <recent name="F:\laravel\htdocs\laravue_inventory\app\Http\Controllers\Api\Auth" />
     </key>
   </component>
   <component name="RunManager">
@@ -220,7 +219,7 @@
       <workItem from="1597991139088" duration="20788000" />
       <workItem from="1598063309989" duration="7354000" />
       <workItem from="1598078297024" duration="18730000" />
-      <workItem from="1598137664184" duration="1075000" />
+      <workItem from="1598137664184" duration="2649000" />
     </task>
     <task id="LOCAL-00001" summary="install laravel ui for vue">
       <created>1597924988497</created>
@@ -446,7 +445,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598105291640</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="product crude done">
+      <created>1598139386011</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1598139386011</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -468,7 +474,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="signup done with api" />
     <MESSAGE value="make a custom middleware for jwt verify" />
     <MESSAGE value="make a helper function AppStorage that help us localStorage" />
     <MESSAGE value="make a helper function TokenVerified that help us check token is valid or not" />
@@ -493,17 +498,18 @@
     <MESSAGE value="employ updated ok" />
     <MESSAGE value="suppliers crude done" />
     <MESSAGE value="category crude done" />
-    <option name="LAST_COMMIT_MESSAGE" value="category crude done" />
+    <MESSAGE value="product crude done" />
+    <option name="LAST_COMMIT_MESSAGE" value="product crude done" />
   </component>
   <component name="WindowStateProjectService">
     <state x="251" y="154" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1598097466703">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
     <state x="251" y="154" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1024.728@0.0.1024.728" timestamp="1598097466703" />
-    <state x="242" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1598108636641">
+    <state x="242" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1598139821328">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
-    <state x="242" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1024.728@0.0.1024.728" timestamp="1598108636641" />
+    <state x="242" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1024.728@0.0.1024.728" timestamp="1598139821328" />
     <state x="292" y="119" key="FileChooserDialogImpl" timestamp="1598091391959">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
@@ -512,9 +518,9 @@
       <screen x="0" y="0" width="1024" height="728" />
     </state>
     <state x="13" y="9" key="SettingsEditor/0.0.1024.728@0.0.1024.728" timestamp="1597924310673" />
-    <state x="104" y="93" key="Vcs.Push.Dialog.v2" timestamp="1598105293127">
+    <state x="104" y="93" key="Vcs.Push.Dialog.v2" timestamp="1598139388030">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
-    <state x="104" y="93" key="Vcs.Push.Dialog.v2/0.0.1024.728@0.0.1024.728" timestamp="1598105293127" />
+    <state x="104" y="93" key="Vcs.Push.Dialog.v2/0.0.1024.728@0.0.1024.728" timestamp="1598139388030" />
   </component>
 </project>
