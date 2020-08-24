@@ -17,6 +17,11 @@ import SupplierIndex from "../views/suppliers/Index";
 import SupplierCreate from "../views/suppliers/Create";
 import SupplierEdit from "../views/suppliers/Edit";
 
+//customers
+import CustomerIndex from "../views/customers/Index";
+import CustomerCreate from "../views/customers/Create";
+import CustomerEdit from "../views/customers/Edit";
+
 //categories
 import CategoryIndex from "../views/categories/Index";
 import CategoryCreate from "../views/categories/Create";
@@ -133,6 +138,23 @@ const routes = [
                 path: 'suppliers/edit/:id',
                 name: 'suppliers-edit',
                 component: SupplierEdit,
+            },
+
+
+            {
+                path: 'customers',
+                name: 'customers',
+                component: CustomerIndex,
+            },
+            {
+                path: 'customers/create',
+                name: 'customers-create',
+                component: CustomerCreate,
+            },
+            {
+                path: 'customers/edit/:id',
+                name: 'customers-edit',
+                component: CustomerEdit,
             },
 
 

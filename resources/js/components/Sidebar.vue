@@ -43,6 +43,19 @@
             </div>
         </li>
         <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#CustomerBootstrap"
+               aria-expanded="true" aria-controls="CustomerBootstrap">
+                <i class="far fa-fw fa-window-maximize"></i>
+                <span>Manage Customers</span>
+            </a>
+            <div id="CustomerBootstrap" class="collapse" aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <router-link class="collapse-item" :to="{name: 'customers-create'}">Create Customer</router-link>
+                    <router-link class="collapse-item" :to="{name: 'customers'}">Customers</router-link>
+                </div>
+            </div>
+        </li>
+        <li class="nav-item">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#CategoryBootstrap"
                aria-expanded="true" aria-controls="CategoryBootstrap">
                 <i class="far fa-fw fa-window-maximize"></i>

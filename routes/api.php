@@ -12,6 +12,7 @@ Route::group(['middleware' => 'api', 'namespace' => 'Api\Auth', 'prefix' => 'aut
 
 Route::apiResource('employs', 'Api\EmployController');
 Route::apiResource('suppliers', 'Api\SupplierController');
+Route::apiResource('customers', 'Api\CustomerController');
 Route::apiResource('categories', 'Api\CategoryController');
 Route::apiResource('products', 'Api\ProductController');
 Route::apiResource('expenses', 'Api\ExpenseController');
