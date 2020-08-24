@@ -19,21 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8153077e-0fa6-4c3a-a28a-abed68885346" name="Default Changelist" comment="expenses crude done">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/SalaryController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Model/Salary.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/factories/SalaryFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_08_23_003631_create_salaries_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/SalarySeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/views/salaries/AllSalary.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/views/salaries/Index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/views/salaries/MonthWiseSalaries.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/views/salaries/Payment.vue" afterDir="false" />
+    <list default="true" id="8153077e-0fa6-4c3a-a28a-abed68885346" name="Default Changelist" comment="salary part complete">
+      <change afterPath="$PROJECT_DIR$/resources/js/views/products/ProductStock.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/Sidebar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Sidebar.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/route/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/route/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,20 +172,21 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../laravel-vue-pass" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/js/views/products" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\laravel\htdocs\laravue_inventory\app\Http\Controllers\Api" />
-      <recent name="F:\laravel\htdocs\laravue_inventory\app\Http\Controllers\Api\Auth" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\laravel\htdocs\laravue_inventory\resources\js\views\products" />
       <recent name="F:\laravel\htdocs\laravue_inventory\resources\js\views" />
       <recent name="F:\laravel\htdocs\laravue_inventory\resources\js\views\employees" />
       <recent name="F:\laravel\htdocs\laravue_inventory\public\backend" />
       <recent name="F:\laravel\htdocs\laravue_inventory" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\laravel\htdocs\laravue_inventory\app\Http\Controllers\Api" />
+      <recent name="F:\laravel\htdocs\laravue_inventory\app\Http\Controllers\Api\Auth" />
     </key>
   </component>
   <component name="RunManager">
@@ -222,7 +213,7 @@
       <workItem from="1598063309989" duration="7354000" />
       <workItem from="1598078297024" duration="18730000" />
       <workItem from="1598137664184" duration="14210000" />
-      <workItem from="1598227547369" duration="624000" />
+      <workItem from="1598227547369" duration="1431000" />
     </task>
     <task id="LOCAL-00001" summary="install laravel ui for vue">
       <created>1597924988497</created>
@@ -462,7 +453,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598140917752</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="salary part complete">
+      <created>1598228293173</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1598228293173</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -484,7 +482,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="make a helper function AppStorage that help us localStorage" />
     <MESSAGE value="make a helper function TokenVerified that help us check token is valid or not" />
     <MESSAGE value="make a helper function User that help us store the token and check" />
     <MESSAGE value="after successfully loggedIn return redirect to dashboard" />
@@ -509,7 +506,8 @@
     <MESSAGE value="category crude done" />
     <MESSAGE value="product crude done" />
     <MESSAGE value="expenses crude done" />
-    <option name="LAST_COMMIT_MESSAGE" value="expenses crude done" />
+    <MESSAGE value="salary part complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="salary part complete" />
   </component>
   <component name="WindowStateProjectService">
     <state x="251" y="154" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1598097466703">
@@ -528,9 +526,9 @@
       <screen x="0" y="0" width="1024" height="728" />
     </state>
     <state x="13" y="9" key="SettingsEditor/0.0.1024.728@0.0.1024.728" timestamp="1597924310673" />
-    <state x="104" y="93" key="Vcs.Push.Dialog.v2" timestamp="1598140919124">
+    <state x="104" y="93" key="Vcs.Push.Dialog.v2" timestamp="1598228296090">
       <screen x="0" y="0" width="1024" height="728" />
     </state>
-    <state x="104" y="93" key="Vcs.Push.Dialog.v2/0.0.1024.728@0.0.1024.728" timestamp="1598140919124" />
+    <state x="104" y="93" key="Vcs.Push.Dialog.v2/0.0.1024.728@0.0.1024.728" timestamp="1598228296090" />
   </component>
 </project>

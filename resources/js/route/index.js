@@ -27,6 +27,7 @@ import CategoryEdit from "../views/categories/Edit";
 import ProductIndex from "../views/products/Index";
 import ProductCreate from "../views/products/Create";
 import ProductEdit from "../views/products/Edit";
+import ProductStock from "../views/products/ProductStock";
 
 
 //expenses
@@ -166,6 +167,11 @@ const routes = [
                 path: 'products/edit/:id',
                 name: 'products-edit',
                 component: ProductEdit,
+            },
+            {
+                path: 'products/stock/',
+                name: 'products-stock',
+                component: ProductStock,
             },
 
 
