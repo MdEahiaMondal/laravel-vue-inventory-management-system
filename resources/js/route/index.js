@@ -35,6 +35,12 @@ import ExpenseCreate from "../views/expenses/Create";
 import ExpenseEdit from "../views/expenses/Edit";
 
 
+//Salaries
+import SalariesIndex from "../views/salaries/Index";
+import SalariesPay from "../views/salaries/Payment";
+import SalariesAll from "../views/salaries/AllSalary";
+import SalariesMonthWiseShow from "../views/salaries/MonthWiseSalaries";
+
 const routes = [
     {
         path: '/',
@@ -177,6 +183,28 @@ const routes = [
                 path: 'expenses/edit/:id',
                 name: 'expenses-edit',
                 component: ExpenseEdit,
+            },
+
+
+            {
+                path: 'salaries',
+                name: 'salaries',
+                component: SalariesIndex,
+            },
+            {
+                path: 'salaries/pay/:id',
+                name: 'salaries-pay',
+                component: SalariesPay,
+            },
+            {
+                path: 'salaries/all/',
+                name: 'salaries-all',
+                component: SalariesAll,
+            },
+            {
+                path: 'salaries/:month',
+                name: 'salaries-month-wise-show',
+                component: SalariesMonthWiseShow,
             },
         ]
     },

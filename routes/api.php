@@ -15,3 +15,5 @@ Route::apiResource('suppliers', 'Api\SupplierController');
 Route::apiResource('categories', 'Api\CategoryController');
 Route::apiResource('products', 'Api\ProductController');
 Route::apiResource('expenses', 'Api\ExpenseController');
+Route::apiResource('salaries', 'Api\SalaryController');
+Route::get('salaries/month/{month}', 'Api\SalaryController@monthWiseSalaries');
