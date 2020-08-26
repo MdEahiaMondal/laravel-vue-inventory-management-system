@@ -12,6 +12,11 @@
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Dashboard</span></router-link>
         </li>
+        <li class="nav-item active">
+            <router-link class="nav-link" :to="{name: 'poses'}">
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>Poses</span></router-link>
+        </li>
         <hr class="sidebar-divider">
         <div class="sidebar-heading">
             Features

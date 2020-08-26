@@ -46,6 +46,7 @@ import SalariesIndex from "../views/salaries/Index";
 import SalariesPay from "../views/salaries/Payment";
 import SalariesAll from "../views/salaries/AllSalary";
 import SalariesMonthWiseShow from "../views/salaries/MonthWiseSalaries";
+import PointOfSale from "../views/poses/PointOfSale";
 
 const routes = [
     {
@@ -233,6 +234,13 @@ const routes = [
                 path: 'salaries/:month',
                 name: 'salaries-month-wise-show',
                 component: SalariesMonthWiseShow,
+            },
+
+
+            {
+                path: 'poses',
+                name: 'poses',
+                component: PointOfSale,
             },
         ]
     },

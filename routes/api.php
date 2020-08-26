@@ -18,3 +18,4 @@ Route::apiResource('products', 'Api\ProductController');
 Route::apiResource('expenses', 'Api\ExpenseController');
 Route::apiResource('salaries', 'Api\SalaryController');
 Route::get('salaries/month/{month}', 'Api\SalaryController@monthWiseSalaries');
+Route::get('poses/products/category/{category_id}', 'Api\PosesController@getCategoryWiseProduct');
