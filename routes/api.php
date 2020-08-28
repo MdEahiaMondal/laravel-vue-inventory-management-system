@@ -27,3 +27,4 @@ Route::get('poses/carts/decrement/{cart_id}', 'Api\PosesController@decrementCart
 
 Route::apiResource('orders', 'Api\OrderController');
 Route::get('order/today', 'Api\OrderController@getTodayOrders');
+Route::get('order/search/{date}', 'Api\OrderController@searchyOrders');

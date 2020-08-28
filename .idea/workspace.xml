@@ -19,30 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8153077e-0fa6-4c3a-a28a-abed68885346" name="Default Changelist" comment="calculate total">
-      <change afterPath="$PROJECT_DIR$/.phpstorm.meta.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/OrderController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/OrderDetailController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Model/Order.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Model/OrderDetail.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/factories/OrderDetailFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/factories/OrderFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_08_28_050223_create_orders_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_08_28_050240_create_order_details_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/OrderDetailSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/OrderSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/views/orders/OrderDetails.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/views/orders/TodayOrders.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/laravue_inventory.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravue_inventory.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="8153077e-0fa6-4c3a-a28a-abed68885346" name="Default Changelist" comment="order done">
+      <change afterPath="$PROJECT_DIR$/resources/js/views/orders/SearchOrders.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/OrderController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Sidebar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Sidebar.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/route/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/route/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/views/poses/PointOfSale.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/poses/PointOfSale.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -201,17 +183,17 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/js/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/js/views/orders" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\laravel\htdocs\laravue_inventory\resources\js\views\orders" />
       <recent name="F:\laravel\htdocs\laravue_inventory\resources\js\views" />
       <recent name="F:\laravel\htdocs\laravue_inventory\resources\js\views\products" />
       <recent name="F:\laravel\htdocs\laravue_inventory\resources\js\views\employees" />
       <recent name="F:\laravel\htdocs\laravue_inventory\public\backend" />
-      <recent name="F:\laravel\htdocs\laravue_inventory" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\laravel\htdocs\laravue_inventory\app\Http\Controllers\Api" />
@@ -251,7 +233,7 @@
       <workItem from="1598502209054" duration="66000" />
       <workItem from="1598512270011" duration="2729000" />
       <workItem from="1598570639087" duration="10988000" />
-      <workItem from="1598591933786" duration="10712000" />
+      <workItem from="1598591933786" duration="12684000" />
     </task>
     <task id="LOCAL-00001" summary="install laravel ui for vue">
       <created>1597924988497</created>
@@ -533,7 +515,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598590363088</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="order done">
+      <created>1598609429888</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1598609429888</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -555,7 +544,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="register done" />
     <MESSAGE value="logout done" />
     <MESSAGE value="hide sidebar and topbar when user not logged in" />
     <MESSAGE value="setup noty form notification" />
@@ -580,7 +568,8 @@
     <MESSAGE value="pose design done" />
     <MESSAGE value="pose implement more functionality" />
     <MESSAGE value="calculate total" />
-    <option name="LAST_COMMIT_MESSAGE" value="calculate total" />
+    <MESSAGE value="order done" />
+    <option name="LAST_COMMIT_MESSAGE" value="order done" />
   </component>
   <component name="WindowStateProjectService">
     <state x="251" y="154" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1598097466703">
@@ -600,10 +589,10 @@
       <screen x="0" y="0" width="1024" height="728" />
     </state>
     <state x="13" y="9" key="SettingsEditor/0.0.1024.728@0.0.1024.728" timestamp="1597924310673" />
-    <state x="104" y="94" key="Vcs.Push.Dialog.v2" timestamp="1598590384067">
+    <state x="104" y="94" key="Vcs.Push.Dialog.v2" timestamp="1598609432016">
       <screen x="0" y="0" width="1024" height="738" />
     </state>
     <state x="104" y="93" key="Vcs.Push.Dialog.v2/0.0.1024.728@0.0.1024.728" timestamp="1598458711707" />
-    <state x="104" y="94" key="Vcs.Push.Dialog.v2/0.0.1024.738@0.0.1024.738" timestamp="1598590384067" />
+    <state x="104" y="94" key="Vcs.Push.Dialog.v2/0.0.1024.738@0.0.1024.738" timestamp="1598609432016" />
   </component>
 </project>

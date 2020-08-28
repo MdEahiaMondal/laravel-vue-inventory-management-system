@@ -49,6 +49,7 @@ import SalariesMonthWiseShow from "../views/salaries/MonthWiseSalaries";
 import PointOfSale from "../views/poses/PointOfSale";
 import TodayOrders from "../views/orders/TodayOrders";
 import OrderDetails from "../views/orders/OrderDetails";
+import SearchOrders from "../views/orders/SearchOrders";
 
 const routes = [
     {
@@ -254,6 +255,11 @@ const routes = [
                 path: 'orders/details/:id',
                 name: 'orders-details',
                 component: OrderDetails,
+            },
+            {
+                path: 'orders/search',
+                name: 'orders-search',
+                component: SearchOrders,
             },
         ]
     },

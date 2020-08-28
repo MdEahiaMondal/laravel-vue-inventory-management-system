@@ -7,7 +7,9 @@ use App\Model\Order;
 use App\Model\OrderDetail;
 use App\Model\Pose;
 use App\Model\Product;
+use DateTime;
 use Illuminate\Http\Request;
+
 
 class OrderController extends Controller
 {
@@ -74,20 +76,14 @@ class OrderController extends Controller
     }
 
 
-    public function edit(Order $order)
+    public function searchyOrders($date)
     {
-        //
+        $make_formate = new DateTime($date);
+        $right_formate =  $make_formate->format('d/m/Y');
+        return Order::with('customer')
+            ->where('order_date', $right_formate)->get();
+
     }
 
 
-    public function update(Request $request, Order $order)
-    {
-        //
-    }
-
-
-    public function destroy(Order $order)
-    {
-        //
-    }
 }
