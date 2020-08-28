@@ -19,16 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8153077e-0fa6-4c3a-a28a-abed68885346" name="Default Changelist" comment="pose design done">
-      <change afterPath="$PROJECT_DIR$/app/Model/Pose.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_08_26_163306_create_poses_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/backend/uploads/customers/1598458877.jpeg" afterDir="false" />
+    <list default="true" id="8153077e-0fa6-4c3a-a28a-abed68885346" name="Default Changelist" comment="pose implement more functionality">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/ExtraController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Model/Extra.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/factories/ExtraFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_08_28_042653_create_extras_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/ExtraSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/PosesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/PosesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/views/poses/PointOfSale.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/poses/PointOfSale.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,16 +180,16 @@
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\laravel\htdocs\laravue_inventory\app\Http\Controllers\Api" />
+      <recent name="F:\laravel\htdocs\laravue_inventory\app\Http\Controllers\Api\Auth" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\laravel\htdocs\laravue_inventory\resources\js\views" />
       <recent name="F:\laravel\htdocs\laravue_inventory\resources\js\views\products" />
       <recent name="F:\laravel\htdocs\laravue_inventory\resources\js\views\employees" />
       <recent name="F:\laravel\htdocs\laravue_inventory\public\backend" />
       <recent name="F:\laravel\htdocs\laravue_inventory" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\laravel\htdocs\laravue_inventory\app\Http\Controllers\Api" />
-      <recent name="F:\laravel\htdocs\laravue_inventory\app\Http\Controllers\Api\Auth" />
     </key>
   </component>
   <component name="RunManager">
@@ -226,7 +224,7 @@
       <workItem from="1598497142211" duration="601000" />
       <workItem from="1598502209054" duration="66000" />
       <workItem from="1598512270011" duration="2729000" />
-      <workItem from="1598570639087" duration="7687000" />
+      <workItem from="1598570639087" duration="9285000" />
     </task>
     <task id="LOCAL-00001" summary="install laravel ui for vue">
       <created>1597924988497</created>
@@ -494,7 +492,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598458709530</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="pose implement more functionality">
+      <created>1598588363719</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1598588363719</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -516,7 +521,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="without loggedIn user can not access secure route" />
     <MESSAGE value="validation error show using sweetalert2 and make a helper function that help handle error message" />
     <MESSAGE value="register done" />
     <MESSAGE value="logout done" />
@@ -541,7 +545,8 @@
     <MESSAGE value="product stock done" />
     <MESSAGE value="customer crude ok" />
     <MESSAGE value="pose design done" />
-    <option name="LAST_COMMIT_MESSAGE" value="pose design done" />
+    <MESSAGE value="pose implement more functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="pose implement more functionality" />
   </component>
   <component name="WindowStateProjectService">
     <state x="251" y="154" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1598097466703">
@@ -561,9 +566,10 @@
       <screen x="0" y="0" width="1024" height="728" />
     </state>
     <state x="13" y="9" key="SettingsEditor/0.0.1024.728@0.0.1024.728" timestamp="1597924310673" />
-    <state x="104" y="93" key="Vcs.Push.Dialog.v2" timestamp="1598458711707">
-      <screen x="0" y="0" width="1024" height="728" />
+    <state x="104" y="94" key="Vcs.Push.Dialog.v2" timestamp="1598588365662">
+      <screen x="0" y="0" width="1024" height="738" />
     </state>
     <state x="104" y="93" key="Vcs.Push.Dialog.v2/0.0.1024.728@0.0.1024.728" timestamp="1598458711707" />
+    <state x="104" y="94" key="Vcs.Push.Dialog.v2/0.0.1024.738@0.0.1024.738" timestamp="1598588365662" />
   </component>
 </project>

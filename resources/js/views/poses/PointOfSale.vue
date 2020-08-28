@@ -50,19 +50,19 @@
                             <ul class="list-group">
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Total Quantity
-                                    <strong>50</strong>
+                                    <strong>{{ total_quantity }}</strong>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                    Sub Total
-                                    <strong>50 $</strong>
+                                    <strong>{{ subtotal }} $</strong>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                    Vat
-                                    <strong>35 %</strong>
+                                    <strong>{{ vat }} %</strong>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                    Total
-                                    <strong>65465 $</strong>
+                                    <strong> {{ subtotal*vat/100 + subtotal }} $</strong>
                                 </li>
                             </ul>
 
@@ -187,6 +187,7 @@ export default {
             categoryWiseProducts: [],
             customers: [],
             carts_products: [],
+            vat : 10
         }
     },
     computed: {
@@ -200,6 +201,22 @@ export default {
                 return item.product_name.toLowerCase().match(this.searchText.toLowerCase())
             })
         },
+
+        total_quantity(){
+            let sum = 0;
+            for (let i = 0; i < this.carts_products.length; i++){
+                sum += parseFloat(this.carts_products[i].selling_quantity)
+            }
+            return sum;
+        },
+        subtotal(){
+            let sum = 0;
+            for (let i = 0; i < this.carts_products.length; i++){
+                sum += (parseFloat(this.carts_products[i].selling_quantity) * parseFloat(this.carts_products[i].selling_price))
+            }
+            return sum;
+        },
+
     },
     methods: {
         cartIncrement(cart_id){

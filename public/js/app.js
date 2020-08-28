@@ -4198,7 +4198,8 @@ __webpack_require__.r(__webpack_exports__);
       categories: [],
       categoryWiseProducts: [],
       customers: [],
-      carts_products: []
+      carts_products: [],
+      vat: 10
     };
   },
   computed: {
@@ -4215,6 +4216,24 @@ __webpack_require__.r(__webpack_exports__);
       return this.categoryWiseProducts.filter(function (item) {
         return item.product_name.toLowerCase().match(_this3.searchText.toLowerCase());
       });
+    },
+    total_quantity: function total_quantity() {
+      var sum = 0;
+
+      for (var i = 0; i < this.carts_products.length; i++) {
+        sum += parseFloat(this.carts_products[i].selling_quantity);
+      }
+
+      return sum;
+    },
+    subtotal: function subtotal() {
+      var sum = 0;
+
+      for (var i = 0; i < this.carts_products.length; i++) {
+        sum += parseFloat(this.carts_products[i].selling_quantity) * parseFloat(this.carts_products[i].selling_price);
+      }
+
+      return sum;
     }
   },
   methods: {
@@ -50939,7 +50958,71 @@ var render = function() {
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "card-footer" }, [
-                _vm._m(3),
+                _c("ul", { staticClass: "list-group" }, [
+                  _c(
+                    "li",
+                    {
+                      staticClass:
+                        "list-group-item d-flex justify-content-between align-items-center"
+                    },
+                    [
+                      _vm._v(
+                        "\n                                Total Quantity\n                                "
+                      ),
+                      _c("strong", [_vm._v(_vm._s(_vm.total_quantity))])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "li",
+                    {
+                      staticClass:
+                        "list-group-item d-flex justify-content-between align-items-center"
+                    },
+                    [
+                      _vm._v(
+                        "\n                               Sub Total\n                                "
+                      ),
+                      _c("strong", [_vm._v(_vm._s(_vm.subtotal) + " $")])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "li",
+                    {
+                      staticClass:
+                        "list-group-item d-flex justify-content-between align-items-center"
+                    },
+                    [
+                      _vm._v(
+                        "\n                               Vat\n                                "
+                      ),
+                      _c("strong", [_vm._v(_vm._s(_vm.vat) + " %")])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "li",
+                    {
+                      staticClass:
+                        "list-group-item d-flex justify-content-between align-items-center"
+                    },
+                    [
+                      _vm._v(
+                        "\n                               Total\n                                "
+                      ),
+                      _c("strong", [
+                        _vm._v(
+                          " " +
+                            _vm._s(
+                              (_vm.subtotal * _vm.vat) / 100 + _vm.subtotal
+                            ) +
+                            " $"
+                        )
+                      ])
+                    ]
+                  )
+                ]),
                 _vm._v(" "),
                 _c("br"),
                 _vm._v(" "),
@@ -50973,11 +51056,11 @@ var render = function() {
                     )
                   ]),
                   _vm._v(" "),
+                  _vm._m(3),
+                  _vm._v(" "),
                   _vm._m(4),
                   _vm._v(" "),
                   _vm._m(5),
-                  _vm._v(" "),
-                  _vm._m(6),
                   _vm._v(" "),
                   _c("button", { staticClass: "btn btn-success" }, [
                     _vm._v("Submit")
@@ -50990,7 +51073,7 @@ var render = function() {
         _vm._v(" "),
         _c("div", { staticClass: "col-xl-7 col-lg-7" }, [
           _c("div", { staticClass: "card mb-4" }, [
-            _vm._m(7),
+            _vm._m(6),
             _vm._v(" "),
             _c(
               "ul",
@@ -50999,7 +51082,7 @@ var render = function() {
                 attrs: { id: "myTab", role: "tablist" }
               },
               [
-                _vm._m(8),
+                _vm._m(7),
                 _vm._v(" "),
                 _vm._l(_vm.categories, function(category) {
                   return _c(
@@ -51361,68 +51444,6 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("th", [_vm._v("Action")])
       ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("ul", { staticClass: "list-group" }, [
-      _c(
-        "li",
-        {
-          staticClass:
-            "list-group-item d-flex justify-content-between align-items-center"
-        },
-        [
-          _vm._v(
-            "\n                                Total Quantity\n                                "
-          ),
-          _c("strong", [_vm._v("50")])
-        ]
-      ),
-      _vm._v(" "),
-      _c(
-        "li",
-        {
-          staticClass:
-            "list-group-item d-flex justify-content-between align-items-center"
-        },
-        [
-          _vm._v(
-            "\n                               Sub Total\n                                "
-          ),
-          _c("strong", [_vm._v("50 $")])
-        ]
-      ),
-      _vm._v(" "),
-      _c(
-        "li",
-        {
-          staticClass:
-            "list-group-item d-flex justify-content-between align-items-center"
-        },
-        [
-          _vm._v(
-            "\n                               Vat\n                                "
-          ),
-          _c("strong", [_vm._v("35 %")])
-        ]
-      ),
-      _vm._v(" "),
-      _c(
-        "li",
-        {
-          staticClass:
-            "list-group-item d-flex justify-content-between align-items-center"
-        },
-        [
-          _vm._v(
-            "\n                               Total\n                                "
-          ),
-          _c("strong", [_vm._v("65465 $")])
-        ]
-      )
     ])
   },
   function() {
