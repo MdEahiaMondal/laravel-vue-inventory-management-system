@@ -28,3 +28,9 @@ Route::get('poses/carts/decrement/{cart_id}', 'Api\PosesController@decrementCart
 Route::apiResource('orders', 'Api\OrderController');
 Route::get('order/today', 'Api\OrderController@getTodayOrders');
 Route::get('order/search/{date}', 'Api\OrderController@searchyOrders');
+
+//Admin Dashboard
+Route::get('today/sell', 'Api\DashboardController@todaySell');
+Route::get('today/income', 'Api\DashboardController@todayIncome');
+Route::get('today/due', 'Api\DashboardController@todayDue');
+Route::get('today/expense', 'Api\DashboardController@todayExpense');

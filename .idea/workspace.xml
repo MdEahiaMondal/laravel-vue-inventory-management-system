@@ -19,12 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8153077e-0fa6-4c3a-a28a-abed68885346" name="Default Changelist" comment="order done">
-      <change afterPath="$PROJECT_DIR$/resources/js/views/orders/SearchOrders.vue" afterDir="false" />
+    <list default="true" id="8153077e-0fa6-4c3a-a28a-abed68885346" name="Default Changelist" comment="order search done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/OrderController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/route/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/route/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/views/Dashboard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/views/Dashboard.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -233,7 +231,7 @@
       <workItem from="1598502209054" duration="66000" />
       <workItem from="1598512270011" duration="2729000" />
       <workItem from="1598570639087" duration="10988000" />
-      <workItem from="1598591933786" duration="12684000" />
+      <workItem from="1598591933786" duration="14171000" />
     </task>
     <task id="LOCAL-00001" summary="install laravel ui for vue">
       <created>1597924988497</created>
@@ -522,7 +520,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598609429888</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="order search done">
+      <created>1598613036952</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1598613036952</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -544,7 +549,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="logout done" />
     <MESSAGE value="hide sidebar and topbar when user not logged in" />
     <MESSAGE value="setup noty form notification" />
     <MESSAGE value="create route for employees" />
@@ -569,7 +573,8 @@
     <MESSAGE value="pose implement more functionality" />
     <MESSAGE value="calculate total" />
     <MESSAGE value="order done" />
-    <option name="LAST_COMMIT_MESSAGE" value="order done" />
+    <MESSAGE value="order search done" />
+    <option name="LAST_COMMIT_MESSAGE" value="order search done" />
   </component>
   <component name="WindowStateProjectService">
     <state x="251" y="154" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1598097466703">
@@ -589,10 +594,10 @@
       <screen x="0" y="0" width="1024" height="728" />
     </state>
     <state x="13" y="9" key="SettingsEditor/0.0.1024.728@0.0.1024.728" timestamp="1597924310673" />
-    <state x="104" y="94" key="Vcs.Push.Dialog.v2" timestamp="1598609432016">
+    <state x="104" y="94" key="Vcs.Push.Dialog.v2" timestamp="1598613038415">
       <screen x="0" y="0" width="1024" height="738" />
     </state>
     <state x="104" y="93" key="Vcs.Push.Dialog.v2/0.0.1024.728@0.0.1024.728" timestamp="1598458711707" />
-    <state x="104" y="94" key="Vcs.Push.Dialog.v2/0.0.1024.738@0.0.1024.738" timestamp="1598609432016" />
+    <state x="104" y="94" key="Vcs.Push.Dialog.v2/0.0.1024.738@0.0.1024.738" timestamp="1598613038415" />
   </component>
 </project>
