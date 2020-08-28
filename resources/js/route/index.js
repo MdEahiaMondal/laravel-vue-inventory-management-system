@@ -47,6 +47,8 @@ import SalariesPay from "../views/salaries/Payment";
 import SalariesAll from "../views/salaries/AllSalary";
 import SalariesMonthWiseShow from "../views/salaries/MonthWiseSalaries";
 import PointOfSale from "../views/poses/PointOfSale";
+import TodayOrders from "../views/orders/TodayOrders";
+import OrderDetails from "../views/orders/OrderDetails";
 
 const routes = [
     {
@@ -241,6 +243,17 @@ const routes = [
                 path: 'poses',
                 name: 'poses',
                 component: PointOfSale,
+            },
+
+            {
+                path: 'orders/today',
+                name: 'today-orders',
+                component: TodayOrders,
+            },
+            {
+                path: 'orders/details/:id',
+                name: 'orders-details',
+                component: OrderDetails,
             },
         ]
     },

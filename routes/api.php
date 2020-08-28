@@ -24,3 +24,6 @@ Route::get('poses/carts/products/', 'Api\PosesController@getCartProduct');
 Route::get('poses/carts/{id}', 'Api\PosesController@removeCartProduct');
 Route::get('poses/carts/increment/{cart_id}', 'Api\PosesController@incrementCartProduct');
 Route::get('poses/carts/decrement/{cart_id}', 'Api\PosesController@decrementCartProduct');
+
+Route::apiResource('orders', 'Api\OrderController');
+Route::get('order/today', 'Api\OrderController@getTodayOrders');

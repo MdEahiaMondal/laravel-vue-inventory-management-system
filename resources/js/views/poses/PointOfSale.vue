@@ -69,31 +69,31 @@
                             <br>
                             <br>
 
-                            <form>
+                            <form @submit.prevent="orderDone">
                                 <div class="form-group">
                                     <label for="exampleFormControlSelect1">Customer Name</label>
-                                    <select class="form-control" id="exampleFormControlSelect1">
+                                    <select class="form-control" v-model="customer_id" id="exampleFormControlSelect1">
                                         <option :value="customer.id" v-for="customer in customers" :key="customer.id">{{ customer.name }}</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Pay Amount</label>
-                                    <input type="number" class="form-control" id="exampleFormControlInput1">
+                                    <input v-model="pay_amount" type="number" class="form-control" id="exampleFormControlInput1">
                                 </div>
                                 <div class="form-group">
                                     <label for="dexampleFormControlInput1">Due Amount</label>
-                                    <input type="number" class="form-control" id="dexampleFormControlInput1">
+                                    <input v-model="due_amount" type="number" class="form-control" id="dexampleFormControlInput1">
                                 </div>
                                 <div class="form-group">
                                     <label for="paytype">Payment Type</label>
-                                    <select class="form-control" id="paytype">
+                                    <select v-model="pay_type" class="form-control" id="paytype">
                                         <option value="hand_cash">Hand Cash</option>
                                         <option value="cash">Cash</option>
                                         <option value="gift_card">Gift Card</option>
                                     </select>
                                 </div>
 
-                                <button class="btn btn-success">Submit</button>
+                                <button type="submit" class="btn btn-success">Submit</button>
                             </form>
 
 
@@ -187,7 +187,11 @@ export default {
             categoryWiseProducts: [],
             customers: [],
             carts_products: [],
-            vat : 10
+            vat : 10,
+            customer_id: '',
+            due_amount: '',
+            pay_amount: '',
+            pay_type: '',
         }
     },
     computed: {
@@ -216,9 +220,31 @@ export default {
             }
             return sum;
         },
+        getOrderInfo(){
+            return  {
+                vat: this.vat,
+                total_qty: this.total_quantity,
+                sub_total: this.subtotal,
+                total: this.subtotal*this.vat/100 + this.subtotal,
+                customer_id: this.customer_id,
+                due_amount: this.due_amount,
+                pay_amount: this.pay_amount,
+                pay_type: this.pay_type,
+            }
+        }
 
     },
     methods: {
+        orderDone(){
+            axios.post('/api/orders', this.getOrderInfo)
+                .then(res => {
+                    Message.Success('Order Successfully done')
+                    this.$router.push({name: 'dashboard'})
+                })
+                .catch(e => {
+                    console.log(e.response)
+                })
+        },
         cartIncrement(cart_id){
             axios.get('/api/poses/carts/increment/'+cart_id)
                 .then(res => {
