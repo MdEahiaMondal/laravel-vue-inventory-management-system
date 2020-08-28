@@ -18,6 +18,8 @@ window.User = User
 import Message from "./helpers/Message";
 window.Message = Message
 
+window.ReloadSpecificComponent = new Vue();
+
 new Vue({
     el: '#app',
     router,

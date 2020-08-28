@@ -19,3 +19,8 @@ Route::apiResource('expenses', 'Api\ExpenseController');
 Route::apiResource('salaries', 'Api\SalaryController');
 Route::get('salaries/month/{month}', 'Api\SalaryController@monthWiseSalaries');
 Route::get('poses/products/category/{category_id}', 'Api\PosesController@getCategoryWiseProduct');
+Route::get('poses/products/{product_id}', 'Api\PosesController@productAddToPose');
+Route::get('poses/carts/products/', 'Api\PosesController@getCartProduct');
+Route::get('poses/carts/{id}', 'Api\PosesController@removeCartProduct');
+Route::get('poses/carts/increment/{cart_id}', 'Api\PosesController@incrementCartProduct');
+Route::get('poses/carts/decrement/{cart_id}', 'Api\PosesController@decrementCartProduct');
