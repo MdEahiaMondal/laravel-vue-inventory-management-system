@@ -2325,8 +2325,8 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       form: {
-        email: 'author@gmail.com',
-        password: '12345678'
+        email: 'mdeahiyakhan@gmail.com',
+        password: 'password'
       },
       errors: []
     };
@@ -73935,8 +73935,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! F:\laravel\htdocs\laravue_inventory\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! F:\laravel\htdocs\laravue_inventory\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! F:\xamp-7.3.10\htdocs\laravue_inventory\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! F:\xamp-7.3.10\htdocs\laravue_inventory\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

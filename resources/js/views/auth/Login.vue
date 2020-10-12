@@ -55,8 +55,8 @@ export default {
     {
         return {
             form: {
-                email: 'author@gmail.com',
-                password: '12345678'
+                email: 'mdeahiyakhan@gmail.com',
+                password: 'password'
             },
             errors: []
         }
